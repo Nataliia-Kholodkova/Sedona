@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/form-styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <nav>
+            <button class="btn-menu btn-menu--open" type="button"></button>
+            <ul class="nav-list">
+                <li class="nav-item nav-item">
+                    <a class="nav-link nav-link" href="index.html">главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">фото и видео</a>
+                </li>
+                <li class="nav-item nav-item--active">
+                    <a class="nav-link nav-link--active">форма отзыва</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">html academy</a>
+                </li>
+                <li class="nav-item nav-item--logo">
+                    <a>
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+                            <img src="img/logo-mobile.svg">
+                        </picture>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-img">
+            <img src="img/small-text.svg" class="header-img--text">
+        </div>
+    </header>
+
+    <main>
+
+        <div class="wrapper-one-column">
+            <h2>Оставьте свой отзыв</h2>
+            <p>помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами
+                достопримечательностях</p>
+        </div>
+        <form class="review">
+            <div class="form-wrapper">
+                <fieldset class="radiobuttons fields-group">
+                    <legend>ВАше Общее впечатление:</legend>
+                    <ul class="radiobuttons-list fields-list">
+                        <li><input type="radio" name="radio" id="radio1" class="input-radio" checked>
+                            <label for="radio1" class="label-radio">Скорее положительное</label>
+                        </li>
+
+                        <li><input type="radio" name="radio" id="radio2" class="input-radio">
+                            <label for="radio2" class="label-radio">Скорее отрицательное</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio" id="radio3" class="input-radio">
+                            <label for="radio3" class="label-radio">Затрудняюсь ответить</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="personnel fields-group">
+                    <legend>Представьтесь:</legend>
+                    <ul class="personnel-list fields-list">
+                        <li>
+                            <label for="name" class="label-text">ИМЯ*:</label>
+                            <input type="text" name="" class="input-text" id="name" placeholder="Петр">
+                        </li>
+                        <li>
+                            <label for="surname" class="label-text">ФАМИЛИЯ*:</label>
+                            <input type="text" name="" id="surname" class="input-text" placeholder="Иванов">
+                        </li>
+                        <li>
+                            <label for="parent-name" class="label-text">Отчество:</label>
+                            <input type="text" name="" class="input-text" id="parent-name" placeholder="Александрович">
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="contacts fields-group">
+                    <legend>Контактная информация:</legend>
+                    <ul class="contacts-list fields-list">
+                        <li>
+                            <label for="tel" class="label-text">Телефон*:</label>
+                            <input type="tel" name="" class="input-text" id="tel" placeholder="Введите телефон">
+                            <span class="tel-ico"></span>
+                        </li>
+                        <li>
+                            <label for="email" class="label-text">Электронная почта*:</label>
+                            <input type="text" name="" id="email" class="input-text" placeholder="Введите e-mail">
+                            <span class="mail-ico"></span>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="places fields-group">
+                    <legend>посещенные достопримечательности:</legend>
+                    <ul class="places-list fields-list">
+                        <li>
+                            <input type="checkbox" name="" class="input-check" id="places1" checked>
+                            <label for="places1" class="label-check">Мост Дьявола</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" class="input-check" id="places2" checked>
+                            <label for="places2" class="label-check">Гора-Колокол</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" class="input-check" id="places3" checked>
+                            <label for="places3" class="label-check">Слайд-парк</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" class="input-check" id="places4">
+                            <label for="places4" class="label-check">Красные скалы</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="emotions fields-group">
+                    <legend>Опишите свои эмоции:</legend>
+                    <textarea class="input-textarea" placeholder="Опишите подробно все свои восторги "></textarea>
+                </fieldset>
+            </div>
+            <button type="submit" class="btn btn-blue">ОТПРАВИТЬ ОТЗЫВ</button>
+            <span>* — обязательные поля</span>
+        </form>
+    </main>
+
+    <footer>
+        <div class="wrapper-three-column">
+            <div class="description description--three-columns visit-sedona">
+                <h3>#visitsedona</h3>
+            </div>
+            <div class="description description--three-columns social-links">
+                <ul class="social clearfix">
+                    <li class="social-item">
+                        <a class="social-link btn-blue social-link--twitter" href="#"></a>
+                    </li>
+                    <li class="social-item">
+                        <a class="social-link btn-blue social-link--fb" href="#"></a>
+                    </li>
+                    <li class="social-item">
+                        <a class="social-link btn-blue social-link--youtube" href="#"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="description description--three-columns developped">
+                <p>pазработано<a href="#" class="html-academy"><img src="img/logo-academy.svg"></a></p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

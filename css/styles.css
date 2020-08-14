@@ -38,6 +38,23 @@ a, button {
     cursor: pointer;
 }
 
+a, a:hover, a:active, a:visited, a:focus {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:focus {
+    outline-color: #81b3d2;
+}
+
+li {
+    list-style: none;
+}
+
 .container {
     max-width: 100%;
     margin: 0 auto;
@@ -85,6 +102,15 @@ a, button {
     flex-direction: row;
 }
 
+.description {
+    -webkit-flex: 1 1 33.33%;
+    flex:  1 1 33.33%;
+    box-sizing: border-box;
+    text-align: center;
+    background: #81b3d2;
+    padding: 52px 57px;
+}
+
 .btn {
     text-align: center;
     text-transform: uppercase;
@@ -109,12 +135,12 @@ a, button {
     color: rgba(255, 255, 255, 0.3);
 }
 
-.btn-braun {
+.btn-brown {
     background-color: rgba(129, 179, 210, 1);
     color: rgba(255, 255, 255, 1);
 }
 
-.btn-transparant {
+.btn-transparent {
     background: transparent;
     color: rgba(255, 255, 255, 1);
     border: 1px solid white;
@@ -172,7 +198,6 @@ nav {
 }
 
 .nav-list {
-    /*min-height: 55px;*/
     box-sizing: border-box;
     display: -webkit-flex;
     -webkit-justify-content: flex-start;
@@ -309,8 +334,14 @@ nav {
         box-sizing: border-box;
     }
 
+    .wrapper-three-column {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        margin-top: 15px;
+        padding-bottom: 35px;
+    }
+
     .nav-list {
-        /*min-height: 55px;*/
         display: -webkit-flex;
         -webkit-justify-content: flex-start;
         display: flex;
@@ -409,334 +440,17 @@ nav {
         background-size: cover;
         width: 23px;
         height: 22px;
-
-    }
-}
-
-/*MAIN*/
-
-.description {
-    -webkit-flex: 1 1 33.33%;
-    flex:  1 1 33.33%;
-    box-sizing: border-box;
-    text-align: center;
-    background: #81b3d2;
-    padding: 52px 57px;
-}
-
-.wrapper {
-    height: 256px;
-}
-
-.description-image {
-    -webkit-flex: 1 1 66.67%;
-    flex:  1 1 66.67%;
-    background: url(../img/photo-city@1x.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: block;
-    padding: 0;
-}
-
-.wrapper-one-column h3 {
-    letter-spacing: 0.1px;
-    word-spacing: 1px;
-    margin-bottom: 28px;
-}
-
-.description h3 {
-    padding: 0 35px;
-    margin-bottom: 8px;
-}
-
-.description p {
-    line-height: 1.66;
-    margin-bottom: 19px;
-}
-
-.description p:last-child {
-    margin-bottom: 0;
-}
-
-@media screen and (max-width: 1199px){
-
-    .description {
-        padding: 45px 32px;
     }
 
-    .description h3 {
-        margin-bottom: 10px;
-    }
-
-    .description p {
-        padding: 0 14px;
-    }
-
-    .description-image {
-        background: url(../img/photo-city@2x.jpg) no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .wrapper-one-column {
-        padding: 50px 30px 49px;
-    }
-
-    .wrapper-one-column h3 {
-        margin-bottom: 31px;
-    }
-}
-
-@media screen and (max-width: 767px){
-
-    .wrapper {
+    .btn-menu--close {
         display: block;
-        height: auto;
-    }
-
-    .wrapper-one-column {
-        padding: 40px 30px 8px;
-    }
-
-    .wrapper-one-column h3 {
-        margin-bottom: 31px;
-    }
-
-    .description {
-        width: 100%;
-        padding: 76px 2px 37px;
-    }
-
-    .description-image {
-       width: 100%;
-        background: url(../img/photo-city@3x.jpg) no-repeat;
+        right: 20px;
+        top: 17px;
+        background: url("../img/menu_open.svg") no-repeat;
+        background-position: center center;
         background-size: cover;
-        background-position: center;
-        height: 260px;
-    }
-
-    .description h3 {
-        margin-bottom: 10px;
-    }
-
-    .description p {
-        margin-bottom: 11px;
-    }
-
-    .wrapper-angle {
-        position: relative;
-        width: 100%;
-    }
-
-    .wrapper-angle:after {
-        display: block;
-        content: '';
-        width: 100%;
-        min-height: 37px;
-        background: url(../img/angle-white.png) no-repeat;
-        background-position: center;
-        background-size: cover;
-        position: absolute;
-        bottom: -37px;
-        left: 0;
-        z-index: 1;
-    }
-}
-
-.description--three-columns {
-    background-color: white;
-    padding: 158px 49px 81px;
-}
-
-.description--three-columns h3 {
-    margin-bottom: 19px;
-}
-
-.description--three-columns:first-child {
-    background: url("../img/house-ico.svg") no-repeat;
-    background-size: 75px 72px;
-    background-position: 50% 23%;
-}
-
-.description--three-columns:nth-child(2) {
-    background: url("../img/food-ico.svg") no-repeat;
-    background-size: 77px 68px;
-    background-position: 50% 24%;
-}
-
-.description--three-columns:last-child {
-    background: url("../img/present-ico.svg") no-repeat;
-    background-size: 64px 75px;
-    background-position: 50% 22%;
-}
-
-@media screen and (max-width: 1199px) {
-    .description--three-columns {
-        padding: 159px 31px 57px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .wrapper-three-column {
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        margin-top: 15px;
-        padding-bottom: 35px;
-    }
-
-    .description--three-columns {
-        width: 100%;
-        padding: 23px 21px 0 69px;
-    }
-
-    .description--three-columns h3, .description--three-columns p {
-        padding: 0;
-        text-align: left;
-    }
-
-    .description--three-columns h3 {
-        margin-bottom: 12px;
-    }
-
-    .description--three-columns:first-child {
-        background: url("../img/house-ico.svg") no-repeat;
-        background-size: 39px 37px;
-        background-position: 21px 11px;
-    }
-
-    .description--three-columns:nth-child(2) {
-        order: 1;
-        background: url("../img/food-ico.svg") no-repeat;
-        background-size: 40px 35px;
-        background-position: 18px 20px;
-    }
-
-    .description--three-columns:last-child {
-        background: url("../img/present-ico.svg") no-repeat;
-        background-size: 32px 38px;
-        background-position: 25px 11px;
-    }
-}
-
-.wrapper-2 .description-image {
-    order: -1;
-    background: url(../img/photo-bridge@1x.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.wrapper-2 .description h3 {
-    padding: 0 68px;
-}
-
-.wrapper-2 .description p {
-    padding: 0 31px;
-}
-
-@media screen and (max-width: 1199px) {
-    .wrapper-2 .description-image {
-        background: url(../img/photo-bridge@2x.jpg) no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .wrapper-2 .description h3 {
-        padding: 0 21px;
-    }
-
-    .wrapper-2 .description p {
-        padding: 0 18px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .wrapper-2 .description {
-        padding: 38px 2px 36px;
-    }
-
-    .wrapper-2 .description-image {
-        background: url(../img/photo-bridge@3x.jpg) no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-}
-
-.container--grey {
-    background: #eeeeee;
-}
-
-.container--grey .description--three-columns {
-    background: none;
-    padding: 43px 58px 63px;
-}
-
-.container--grey .description--three-columns h3 {
-    padding: 0 64px;
-    margin-bottom: 10px;
-}
-
-@media screen and (max-width: 1199px) {
-    .container--grey .description--three-columns {
-        padding: 45px 5px 38px;
-    }
-
-    .container--grey .description--three-columns p {
-        padding: 0 44px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .container--grey .wrapper-three-column {
-        margin-top: 0;
-        padding-bottom: 0;
-    }
-
-    .container--grey .description--three-columns {
-        padding: 27px 5px 25px;
-    }
-
-    .container--grey .description--three-columns p, .container--grey .description--three-columns h3 {
-        text-align: center;
-        padding: 0 30px;
-    }
-
-    .container--grey .description--three-columns:nth-child(2) {
-        order: 0;
-    }
-}
-
-.wrapper-one-column h2 {
-    padding-top: 6px;
-    margin-bottom: 28px;
-}
-
-.wrapper-one-column .btn-blue {
-    margin: 45px 15px 15px;
-    width: 458px;
-    height: 57px;
-}
-
-@media screen and (max-width: 1199px) {
-    .wrapper-one-column .btn-blue {
-        margin: 42px 15px 9px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-
-    main .wrapper-one-column:last-child {
-        padding: 22px 18px 8px;
-    }
-
-
-    .wrapper-one-column h2 {
-        margin-bottom: 20px;
-    }
-
-    .wrapper-one-column .btn-blue {
-        margin: 36px 2px 41px;
-        width: 279px;
-        height: 57px;
+        width: 23px;
+        height: 22px;
     }
 }
 

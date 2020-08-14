@@ -73,12 +73,13 @@ li {
     position: relative;
     box-sizing: border-box;
     display: -webkit-flex;
-    -webkit-justify-content: flex-start;
+    -webkit-justify-content: space-between;
     display: flex;
     justify-content: space-between;
     -webkit-align-items: stretch;
     -webkit-flex-direction: row;
     align-items: stretch;
+    flex-wrap: wrap;
     flex-direction: row;
 }
 
@@ -93,7 +94,7 @@ li {
     margin: 0 auto;
     box-sizing: border-box;
     display: -webkit-flex;
-    -webkit-justify-content: flex-start;
+    -webkit-justify-content: space-between;
     display: flex;
     justify-content: space-between;
     -webkit-align-items: center;

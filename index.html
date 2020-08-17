@@ -13,7 +13,7 @@
     <!--HEADER-->
     <header>
         <nav>
-            <button class="btn-menu btn-menu--open" type="button"></button>
+            <button class="btn-menu btn-menu--open" type="button" id="btn-menu"></button>
             <ul class="nav-list">
                 <li class="nav-item nav-item--active">
                     <a class="nav-link nav-link--active" href="">главная</a>
@@ -107,13 +107,43 @@
                 <h2>ЗАИНТЕРЕСОВАЛИСЬ?</h2>
                 <p>Укажите предполагаемые даты поездки,
                     и мы покажем вам лучшие предложения гостиниц в седоне</p>
-                <button class="btn btn-blue" type="button">НАЙТИ гостиницу</button>
+                <button class="btn btn-brown" type="button" id="btn-search">ПОИСК ГОСТИНИЦЫ В седоне</button>
+                <div class="search hidden" id="search-form">
+                    <form action="#" method="get" class="search-form">
+                        <ul class="dates-list search-form-list">
+                            <li>
+                                <label for="start-date" class="label-text">Дата заезда:</label>
+                                <input type="text" name="" class="input-text search-input-text" id="start-date" placeholder="24 Апреля 2017">
+                                <span class="date-ico"></span>
+                            </li>
+                            <li>
+                                <label for="end-date" class="label-text">Дата Выезда:</label>
+                                <input type="text" name="" id="end-date" class="input-text search-input-text" placeholder="4 июля 2017">
+                                <span class="date-ico"></span>
+                            </li>
+                        </ul>
+                        <ul class="counts-list search-form-list">
+                            <li>
+                                <label for="adults" class="label-text">ВзрослыЕ:</label>
+                                <button class="btn btn-number" type="button" id="adults-decr">&dash;</button>
+                                <input type="number" name="" class="input-number" id="adults" value="2" min="1" max="10">
+                                <button class="btn btn-number" type="button" id="adults-incr">+</button>
+                            </li>
+                            <li>
+                                <label for="children" class="label-text">ДетИ:</label>
+                                <button class="btn btn-number" type="button" id="children-decr">&dash;</button>
+                                <input type="number" name="" class="input-number" id="children" value="0" min="0" max="10">
+                                <button class="btn btn-number" type="button" id="children-incr">+</button>
+                            </li>
+                        </ul>
+                        <button type="submit" class="btn btn-blue">НАЙТИ</button>
+                    </form>
+                </div>
             </div>
             <div class="map-container">
                 <img src="img/map-marker.svg" class="map-marker">
             </div>
         </section>
-
     </main>
     <!--FOOTER-->
     <footer>
@@ -143,6 +173,8 @@
         </div>
     </footer>
 </div>
+
+<script src="js/js-min.js"></script>
 
 </body>
 </html>

@@ -73,6 +73,10 @@ li {
     clear: both;
 }
 
+.hidden {
+    display: none;
+}
+
 .btn {
     font: inherit;
     text-align: center;
@@ -99,8 +103,17 @@ li {
 }
 
 .btn-brown {
-    background-color: rgba(129, 179, 210, 1);
+    background-color: rgba(118, 99, 87, 1);
     color: rgba(255, 255, 255, 1);
+}
+
+.btn-brown:hover, .btn-brown:focus {
+    background-color: #604e43;
+}
+
+.btn-brown:active {
+    background-color: #503e33;
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .btn-transparent {
@@ -508,11 +521,15 @@ nav {
 
 .wrapper-left .description-image {
     background: url(../img/photo-city@1x.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .wrapper-right .description-image {
     order: -1;
     background: url(../img/photo-bridge@1x.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .wrapper--white .description {
@@ -563,10 +580,10 @@ nav {
 }
 
 .section-footer {
-    width: 458px;
+    width: 568px;
     margin: 0 auto;
     padding-top: 50px;
-    padding-bottom: 67px;
+    position: relative;
 }
 
 .section-footer h2 {
@@ -577,9 +594,9 @@ nav {
     margin: 0 30px 50px;
 }
 
-.section-footer .btn-blue {
+.section-footer .btn-brown {
     width: 100%;
-    height: 58px;
+    height: 87px;
 }
 
 .map-container {
@@ -653,14 +670,13 @@ nav {
 
     .section-footer {
         width: 457px;
-        padding-bottom: 58px;
     }
 
     .section-footer p {
         margin-bottom: 46px;
     }
 
-    .section-footer .btn-blue {
+    .section-footer .btn-brown {
         width: 100%;
         height: 58px;
     }
@@ -779,7 +795,6 @@ nav {
     .section-footer {
         width: 280px;
         padding-top: 27px;
-        padding-bottom: 49px;
 
     }
 
@@ -841,7 +856,7 @@ nav {
     margin-bottom: 30px;
 }
 
-form {
+.review {
     width: 958px;
     margin: 0 auto;
 }
@@ -890,7 +905,7 @@ legend {
     padding-right: 15px;
 }
 
-.input-text {
+.input-text, .input-number, .btn-number {
     border: 4px solid transparent;
     background-color: #f2f2f2;
     box-sizing: border-box;
@@ -899,11 +914,11 @@ legend {
     padding: 12px 17px;
 }
 
-.input-text:hover, .input-textarea:hover {
+.input-text:hover, .input-number:hover, .btn-number:hover {
     background-color: #e5e5e5;
 }
 
-.input-text:active, .input-textarea:active, .input-text:focus, .input-textarea:focus {
+.input-text:active, .input-textarea:active, .input-text:focus, .input-textarea:focus, .input-number:focus, .btn-number:focus, .btn-number:active {
     background-color: #ffffff;
     border: 4px solid #e5e5e5;
 }
@@ -1182,7 +1197,7 @@ legend {
         margin-bottom: 30px;
     }
 
-    form {
+    .review {
         width: 648px;
     }
 
@@ -1298,7 +1313,7 @@ legend {
         line-height: 26px;
     }
 
-    form {
+    .review {
         width: 100%;
     }
 
@@ -1721,7 +1736,7 @@ input[type=range]:focus {
         height: auto;
     }
 
-    .wrapper {
+    .video, .photos {
         width: 648px;
         margin: 0 auto;
     }
@@ -1838,7 +1853,7 @@ input[type=range]:focus {
         height: auto;
     }
 
-    .wrapper {
+    .photos {
         width: 280px;
     }
 
@@ -2097,3 +2112,185 @@ footer {
         margin: 0;
     }
 }
+
+
+/*MODALS*/
+
+
+.search {
+    width: 568px;
+    height: 395px;
+    padding-top: 54px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -395px;
+    z-index: 1;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.search-form {
+    width: 458px;
+    margin:  0 auto;
+}
+
+.search-form-list {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 1px;
+}
+
+.search-form input {
+    vertical-align: middle;
+}
+
+.search-form-list li {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 100%;
+    padding-bottom: 28px;
+    position: relative;
+}
+
+.search-form label {
+    display: block;
+    width: 34%;
+    padding: 0;
+    font-weight: 700;
+}
+
+.search-form .input-text::placeholder {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.search-form .input-text {
+    padding: 3px 28px 3px 7px;
+}
+
+.search-form li span {
+    position: absolute;
+    width: 21px;
+    height: 22px;
+    display: block;
+    background: url("../img/calendar.svg");
+    background-position: center;
+    background-size: cover;
+    right: 7px;
+    bottom: 37px;
+}
+
+.counts-list {
+    flex-wrap: nowrap;
+}
+
+.counts-list li {
+    justify-content: center;
+}
+
+.input-number {
+    font-size: 14px;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    padding-left: 11px;
+    border: none;
+    background: #f2f2f2;
+}
+
+.input-number::-webkit-inner-spin-button,
+.input-number::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn-number {
+    padding: 0;
+    margin: 0;
+    border: none;
+    color: #a9a9a9;
+    font-weight: 700;
+    width: 38px;
+    height: 38px;
+    box-sizing: border-box;
+}
+
+
+.counts-list li:first-child label {
+    padding-right: 35px;
+}
+
+.counts-list li:last-child label {
+    padding-left: 51px;
+
+}
+
+.search-form .btn-blue {
+    padding: 16px 196px;
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 1199px){
+    .search {
+        width: 457px;
+    }
+    .search-form {
+        width: 457px;
+        margin: 0 auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .search-form .btn-blue {
+        padding: 16px 180px;}
+
+}
+
+@media screen and (max-width: 767px){
+    .search {
+        width: 100%;
+    }
+    .search-form {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .counts-list, .dates-list {
+        flex-wrap: wrap;
+    }
+
+    .search-form label{
+        width: 50%;
+    }
+
+    .search-form .btn-blue {
+        padding: 16px 180px;}
+
+    .counts-list li:last-child label {
+         padding-left: 0;
+    }
+
+    .counts-list li:first-child label {
+        padding-right: 0;
+    }
+
+    .search-form li span {
+        bottom: 42px;
+    }
+
+    .search-form .btn-blue {
+            padding: 16px 91px;
+        margin-top: -16px;
+        }
+}
+

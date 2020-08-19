@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Форма отзыва</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -23,7 +23,7 @@
                     <a class="nav-link nav-link--active">форма отзыва</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">html academy</a>
+                    <a class="nav-link" href="hotels.html">Гостиницы</a>
                 </li>
                 <li class="nav-item nav-item--logo">
                     <a>
@@ -47,19 +47,19 @@
                 достопримечательностях</p>
         </div>
         <form class="review">
-            <div class="form-wrapper">
+            <div class="form-wrapper form-wrapper--forms">
                 <fieldset class="radiobuttons fields-group">
                     <legend>ВАше Общее впечатление:</legend>
                     <ul class="radiobuttons-list fields-list">
-                        <li><input type="radio" name="radio" id="radio1" class="input-radio" checked>
+                        <li><input type="radio" name="impression" id="radio1" class="input-radio" checked>
                             <label for="radio1" class="label-radio">Скорее положительное</label>
                         </li>
 
-                        <li><input type="radio" name="radio" id="radio2" class="input-radio">
+                        <li><input type="radio" name="impression" id="radio2" class="input-radio">
                             <label for="radio2" class="label-radio">Скорее отрицательное</label>
                         </li>
                         <li>
-                            <input type="radio" name="radio" id="radio3" class="input-radio">
+                            <input type="radio" name="impression" id="radio3" class="input-radio">
                             <label for="radio3" class="label-radio">Затрудняюсь ответить</label>
                         </li>
                     </ul>
@@ -69,15 +69,18 @@
                     <ul class="personnel-list fields-list">
                         <li>
                             <label for="name" class="label-text">ИМЯ*:</label>
-                            <input type="text" name="" class="input-text" id="name" placeholder="Петр">
+                            <input type="text" name="first_name" class="input-text" id="name" placeholder="Петр"
+                                   required>
                         </li>
                         <li>
                             <label for="surname" class="label-text">ФАМИЛИЯ*:</label>
-                            <input type="text" name="" id="surname" class="input-text" placeholder="Иванов">
+                            <input type="text" name="last_name" id="surname" class="input-text" placeholder="Иванов"
+                                   required>
                         </li>
                         <li>
                             <label for="parent-name" class="label-text">Отчество:</label>
-                            <input type="text" name="" class="input-text" id="parent-name" placeholder="Александрович">
+                            <input type="text" name="third_name" class="input-text" id="parent-name"
+                                   placeholder="Александрович">
                         </li>
                     </ul>
                 </fieldset>
@@ -86,12 +89,14 @@
                     <ul class="contacts-list fields-list">
                         <li>
                             <label for="tel" class="label-text">Телефон*:</label>
-                            <input type="tel" name="" class="input-text" id="tel" placeholder="Введите телефон">
+                            <input type="tel" name="tel" class="input-text" id="tel" placeholder="Введите телефон"
+                                   required>
                             <span class="tel-ico"></span>
                         </li>
                         <li>
                             <label for="email" class="label-text">Электронная почта*:</label>
-                            <input type="text" name="" id="email" class="input-text" placeholder="Введите e-mail">
+                            <input type="text" name="email" id="email" class="input-text" placeholder="Введите e-mail"
+                                   required>
                             <span class="mail-ico"></span>
                         </li>
                     </ul>
@@ -100,29 +105,30 @@
                     <legend>посещенные достопримечательности:</legend>
                     <ul class="places-list fields-list">
                         <li>
-                            <input type="checkbox" name="" class="input-check" id="places1" checked>
+                            <input type="checkbox" name="diablo_bridge" class="input-check" id="places1" checked>
                             <label for="places1" class="label-check">Мост Дьявола</label>
                         </li>
                         <li>
-                            <input type="checkbox" name="" class="input-check" id="places2" checked>
+                            <input type="checkbox" name="rock_bell" class="input-check" id="places2" checked>
                             <label for="places2" class="label-check">Гора-Колокол</label>
                         </li>
                         <li>
-                            <input type="checkbox" name="" class="input-check" id="places3" checked>
+                            <input type="checkbox" name="slide_park" class="input-check" id="places3" checked>
                             <label for="places3" class="label-check">Слайд-парк</label>
                         </li>
                         <li>
-                            <input type="checkbox" name="" class="input-check" id="places4">
+                            <input type="checkbox" name="red_rocks" class="input-check" id="places4">
                             <label for="places4" class="label-check">Красные скалы</label>
                         </li>
                     </ul>
                 </fieldset>
                 <fieldset class="emotions fields-group">
                     <legend>Опишите свои эмоции:</legend>
-                    <textarea class="input-textarea" placeholder="Опишите подробно все свои восторги "></textarea>
+                    <textarea class="input-textarea" placeholder="Опишите подробно все свои восторги"
+                              name="emotions"></textarea>
                 </fieldset>
             </div>
-            <button type="submit" class="btn btn-blue">ОТПРАВИТЬ ОТЗЫВ</button>
+            <button type="submit" class="btn btn-blue" id="btn-form-submit">ОТПРАВИТЬ ОТЗЫВ</button>
             <span>* — обязательные поля</span>
         </form>
     </main>
@@ -153,6 +159,28 @@
             </div>
         </div>
     </footer>
+
+    <!--MODALS-->
+
+    <!--POPUP FAIL-->
+    <div class="popup popup-fail hidden">
+        <h3>Что-то пошло не так!</h3>
+        <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="btn btn-blue btn-popup-fail" id="popup-fail" type="button">OK</button>
+    </div>
+
+    <!--POPUP SUCCESS-->
+    <div class="popup popup-success hidden">
+        <div class="popup-container">
+            <h2>Ваш отзыв отправлен!</h2>
+            <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+                В ближайшее время мы опубликуем его на сайте.</p>
+        </div>
+        <div class="popup-container">
+            <button class="btn btn-blue btn-popup-success" id="popup-success" type="button">ЗАКРЫТЬ ОКНО</button>
+        </div>
+    </div>
+
 </div>
 
 <script src="js/js-min.js"></script>

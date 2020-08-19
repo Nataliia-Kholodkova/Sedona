@@ -3,6 +3,12 @@ let search_form = document.getElementById("search-form");
 let menu_button = document.getElementById("btn-menu");
 let menu_items = document.getElementsByClassName("nav-item");
 let video = document.getElementById("video");
+let popup_fail = document.getElementById("popup-fail");
+let popup_success = document.getElementById("popup-success");
+let form_submit = document.getElementById("btn-form-submit");
+let range_min = document.getElementById("range-price-min");
+let range_max = document.getElementById("range-price-max");
+
 
 function changeClassMenuItem(item, index, array) {
     if (item.classList.contains("nav-item--active") || item.classList.contains("nav-item--logo")) {
@@ -29,6 +35,18 @@ function Decrement(input) {
     }
 }
 
+function ChangeRangePriceMin(min_val) {
+    let s = min_val.innerHTML.slice(0, 3);
+    s += range_min.value;
+    min_val.innerHTML = s
+}
+
+function ChangeRangePriceMax(max_val) {
+    let s = max_val.innerHTML.slice(0, 3);
+    s += range_max.value;
+    max_val.innerHTML = s
+}
+
 // SEARCH DECREMENT-INCREMENT
 
 if (search_button) {
@@ -49,7 +67,7 @@ if (search_button) {
     let children = document.getElementById("children");
     let children_decr = document.getElementById("children-decr");
     let children_incr = document.getElementById("children-incr");
-    adults_decr.addEventListener("click", function(event) {
+    adults_decr.addEventListener("click", function (event) {
 
         Decrement(adults)
     });
@@ -65,16 +83,17 @@ if (search_button) {
         event.preventDefault();
         Increment(children)
     })
-};
+}
+;
 
 // VIDEO CONTROLS
 
 if (video) {
     let replay = document.getElementById("replay");
     let full_screen = document.getElementById("fullscreen");
-    let volume_range = document.getElementById("range");
+    let volume_range = document.getElementById("video-range");
 
-    video.addEventListener("click", function() {
+    video.addEventListener("click", function () {
         if (video.paused == true) {
             video.play();
         } else {
@@ -82,7 +101,7 @@ if (video) {
         }
     });
 
-    full_screen.addEventListener("click", function() {
+    full_screen.addEventListener("click", function () {
         if (video.requestFullscreen) {
             video.requestFullscreen();
         } else if (video.mozRequestFullScreen) {
@@ -92,7 +111,7 @@ if (video) {
         }
     });
 
-    volume_range.addEventListener("change", function() {
+    volume_range.addEventListener("change", function () {
         // Update the video volume
         video.volume = volume_range.value;
     });
@@ -102,6 +121,30 @@ if (video) {
             video.currentTime = 0
         }
         video.play();
+    })
+}
+
+if (range_min && range_max) {
+    let min_val = document.getElementById("min-price");
+    let max_val = document.getElementById("max-price");
+    min_val.innerHTML += range_min.value;
+    max_val.innerHTML += range_max.value;
+    range_min.addEventListener("change", function () {
+        event.preventDefault();
+        ChangeRangePriceMin(min_val)
+    });
+    range_max.addEventListener("change", function () {
+        event.preventDefault();
+        ChangeRangePriceMax(max_val)
+    });
+
+    range_min.addEventListener("input", function () {
+        event.preventDefault();
+        ChangeRangePriceMin(min_val)
+    });
+    range_max.addEventListener("input", function () {
+        event.preventDefault();
+        ChangeRangePriceMax(max_val)
     })
 
 }
@@ -122,5 +165,31 @@ menu_button.addEventListener("click", function (event) {
         menu_button.classList.add("btn-menu--open")
     }
 });
+
+if (popup_fail) {
+    popup_fail.addEventListener("click", function (event) {
+        event.preventDefault();
+        let popup = document.getElementsByClassName("popup-fail")[0];
+        popup.classList.add("hidden")
+    });
+}
+
+if (popup_success) {
+    popup_success.addEventListener("click", function (event) {
+        event.preventDefault();
+        let popup = document.getElementsByClassName("popup-success")[0];
+        popup.classList.add("hidden")
+    })
+}
+
+if (form_submit) {
+    form_submit.addEventListener("click", function (event) {
+        event.preventDefault();
+        let popup = document.getElementsByClassName("popup-success")[0];
+        popup.classList.remove("hidden")
+    })
+}
+
+
 
 

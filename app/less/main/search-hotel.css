@@ -1,0 +1,152 @@
+.reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: none;
+}
+.text-input {
+  font: inherit;
+  box-sizing: border-box;
+  color: black;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  opacity: 1;
+}
+.modal__display.search-form__modal {
+  width: 87.5%;
+  top: 137px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.form-hotels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 25px;
+}
+.form-hotels .label {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.form-hotels .label span {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+  text-align: left;
+  display: block;
+  margin-bottom: 10px;
+}
+.form-hotels .label-number {
+  width: 45%;
+}
+.form-hotels .label-number div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+.form-hotels .label-number div .btn,
+.form-hotels .label-number div .input {
+  width: 33.33%;
+  background-color: #f2f2f2;
+  padding: 13px 0;
+  font-weight: 700;
+  font-size: 14px;
+}
+.form-hotels .label-number div .input {
+  border: none;
+  outline: none;
+  text-align: center;
+}
+.form-hotels .label-number div .btn {
+  font-size: 21px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.form-hotels .label-number div .btn:hover {
+  color: black;
+}
+.form-hotels .label-number div .btn:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+.form-hotels .input-text {
+  max-width: 100%;
+  width: inherit;
+  padding: 10px;
+  padding-right: 26px;
+}
+.form-hotels .label-text svg {
+  fill: #a9a9a9;
+  position: absolute;
+  top: 45px;
+  right: 6px;
+}
+.form-hotels .label-text:hover svg {
+  fill: black;
+}
+.form-hotels .label-text:focus svg,
+.form-hotels .label-text:active svg {
+  fill: rgba(0, 0, 0, 0.3);
+}
+.form-hotels .btn-blue {
+  width: 100%;
+  padding: 13px 0;
+  margin-top: 35px;
+}
+@media screen and (min-width: 768px) {
+  .modal__display.search-form__modal {
+    width: 568px;
+    top: 120px;
+  }
+  .form-hotels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 55px;
+  }
+  .form-hotels .label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .form-hotels .label span {
+    margin-bottom: 0;
+  }
+  .form-hotels .label-number__adults {
+    width: 226px;
+  }
+  .form-hotels .label-number__children {
+    width: 178px;
+  }
+  .form-hotels .label-number div {
+    display: flex;
+    justify-content: flex-start;
+    width: 114px;
+    background-color: #f2f2f2;
+  }
+  .form-hotels .label-number div .btn,
+  .form-hotels .label-number div .input {
+    padding: 7px 0;
+  }
+  .form-hotels .input-text {
+    width: 348px;
+    padding: 6px 30px 5px 10px;
+  }
+  .form-hotels .label-text svg {
+    top: 7px;
+    right: 9px;
+  }
+  .form-hotels .btn-blue {
+    padding: 16px 0;
+    margin-top: 22px;
+  }
+}

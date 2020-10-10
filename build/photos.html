@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Фото и видео</title>
+    <meta name="description" content="Sedona page with photos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="fonts/ptsans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsans-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsans-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsans-bold.woff" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div class="container">
+    <header class="header header__main-page">
+        <nav class="navigation navigation__js">
+            <button type="button" class="btn btn-menu btn-menu__open" name="open_menu"><span class="visually-hidden">Open menu</span>
+            </button>
+            <button type="button" class="btn btn-menu btn-menu__close" name="close_menu"><span class="visually-hidden">Close menu></span>
+            </button>
+            <ul class="navigation-list">
+                <li class="navigation-item"><a href="index.html">Главная</a></li>
+                <li class="navigation-item navigation-item__active"><a href="">фото и видео</a></li>
+                <li class="navigation-item"><a href="forms.html">Форма отзыва</a></li>
+                <li class="navigation-item"><a href="hotels.html">гостиницы</a></li>
+                <li class="navigation-item navigation-item__logo"><a href="index.html">
+                    <picture>
+                        <source srcset="img/logo-desktop.svg" media="(min-width: 1280px)">
+                        <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
+                        <img src="img/logo-mobile.svg" class="logo" width="102" height="83" alt="Sedona logo">
+                    </picture>
+                </a></li>
+            </ul>
+        </nav>
+        <section class="background background-photos">
+            <img src="img/sedona.png" class="welcome-text" width="229" height="39" alt="Sedona welcome text">
+        </section>
+    </header>
+    <main class="main main__main-photos">
+        <section class="section section-head">
+            <h2 class="section-title section-title__dark">
+                Фото и видео
+            </h2>
+            <p class="section-text section-text__dark">
+                Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+            </p>
+        </section>
+        <section class="section section__main-photo">
+            <figure class="main-image">
+                <picture>
+                    <source srcset="img/photo-1-desktop.jpg, img/photo-1-desktop@2x.jpg" media="(min-width: 1280px)">
+                    <source srcset="img/photo-1-tablet.jpg, img/photo-1-tablet@2x.jpg" media="(min-width: 768px)">
+                    <img srcset="img/photo-1-mobile@2x.jpg" src="img/photo-1-mobile.jpg"
+                         alt="Photo of the sunset and the road" width="280" height="280">
+                </picture>
+                <figcaption class="image-caption">
+                    <div class="description">
+                        <p class="title">неродные просторы</p>
+                        <p class="author">Автор фото: Борис</p>
+                    </div>
+                    <div class="likes">
+                        <a href="#">
+                            <svg width="23" height="21">
+                                <use xlink:href="img/sprite-svg.svg#like-ico"></use>
+                            </svg>
+                            <span>1350</span>
+                        </a>
+                    </div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="section section-gallery">
+            <figure class="image">
+                <picture>
+                    <source srcset="img/photo-2-desktop.jpg, img/photo-2-desktop@2x.jpg" media="(min-width: 1280px)">
+                    <source srcset="img/photo-2-tablet.jpg, img/photo-2-tablet@2x.jpg" media="(min-width: 768px)">
+                    <img srcset="img/photo-2-mobile@2x.jpg" src="img/photo-2-mobile.jpg" alt="Photo of the nature"
+                         width="280" height="280">
+                </picture>
+                <figcaption class="image-caption">
+                    <div class="description">
+                        <p class="title">Местная растительность</p>
+                        <p class="author">Автор фото: Сергей</p>
+                    </div>
+                    <div class="likes">
+                        <a href="#">
+                            <svg width="23" height="21">
+                                <use xlink:href="img/sprite-svg.svg#like-ico"></use>
+                            </svg>
+                            <span>143</span>
+                        </a>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure class="image">
+                <picture>
+                    <source srcset="img/photo-3-desktop.jpg, img/photo-3-desktop@2x.jpg" media="(min-width: 1280px)">
+                    <source srcset="img/photo-3-tablet.jpg, img/photo-3-tablet@2x.jpg" media="(min-width: 768px)">
+                    <img srcset="img/photo-3-mobile@2x.jpg" src="img/photo-3-mobile.jpg" alt="Photo of the road"
+                         width="280" height="280">
+                </picture>
+                <figcaption class="image-caption">
+                    <div class="description">
+                        <p class="title">Дорога на север </p>
+                        <p class="author">Автор фото: Петр</p>
+                    </div>
+                    <div class="likes">
+                        <a href="#">
+                            <svg width="23" height="21">
+                                <use xlink:href="img/sprite-svg.svg#like-ico"></use>
+                            </svg>
+                            <span>96</span>
+                        </a>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure class="image">
+                <picture>
+                    <source srcset="img/photo-4-desktop.jpg, img/photo-4-desktop@2x.jpg" media="(min-width: 1280px)">
+                    <source srcset="img/photo-4-tablet.jpg, img/photo-4-tablet@2x.jpg" media="(min-width: 768px)">
+                    <img srcset="img/photo-4-mobile@2x.jpg" src="img/photo-4-mobile.jpg" alt="Photo of the valley"
+                         width="280" height="280">
+                </picture>
+                <figcaption class="image-caption">
+                    <div class="description">
+                        <p class="title">Мост дьявола </p>
+                        <p class="author">Автор фото: Антон</p>
+                    </div>
+                    <div class="likes">
+                        <a href="#">
+                            <svg width="23" height="21">
+                                <use xlink:href="img/sprite-svg.svg#like-ico"></use>
+                            </svg>
+                            <span>254</span>
+                        </a>
+                    </div>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="section section-head">
+            <h2 class="section-title section-title__dark">
+                Все еще сомневаетесь?
+            </h2>
+            <p class="section-text section-text__dark">
+                Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
+            </p>
+        </section>
+        <section class="section section-video">
+            <div class="video">
+                <picture>
+                    <source srcset="img/video-desktop.jpg, img/video-desktop@2x.jpg" media="(min-width: 1280px)">
+                    <source srcset="img/video-tablet.jpg, img/video-tablet@2x.jpg" media="(min-width: 768px)">
+                    <img srcset="img/video-mobile@2x.jpg" src="img/video-mobile.jpg" alt="holder" width="100%"
+                         height="200">
+                </picture>
+                <div class="controls">
+                    <div class="range">
+                        <div class="line"></div>
+                        <div class="tumb"></div>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn btn-replay" type="button">
+                            <svg width="16" height="20">
+                                <use xlink:href="img/sprite-svg.svg#replay-ico"></use>
+                            </svg>
+                        </button>
+                        <button class="btn btn-subtitles" type="button">
+                            <svg width="32" height="20">
+                                <use xlink:href="img/sprite-svg.svg#subtitles-ico"></use>
+                            </svg>
+                        </button>
+                        <button class="btn btn-fullscreen" type="button">
+                            <svg width="20" height="20">
+                                <use xlink:href="img/sprite-svg.svg#fullscreen-ico"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer footer__main-page">
+        <div class="hash-tag">
+            <h2 class="section-title section-title__dark">
+                #visitSEDONA
+            </h2>
+        </div>
+
+        <ul class="social-list">
+            <li class="social-item social-item__twitter"><a href="#"><span class="visually-hidden">Twitter</span></a>
+            </li>
+            <li class="social-item social-item__facebook"><a href="#"><span class="visually-hidden">Facebook</span></a>
+            </li>
+            <li class="social-item social-item__youtube"><a href="#"><span class="visually-hidden">Youtube</span></a>
+            </li>
+        </ul>
+
+        <div class="developped">
+
+            <a class="link link-academy" href="#">Разработано
+                <svg>
+
+                    <use xlink:href="img/sprite-svg.svg#accademy-ico" width="27" height="34"></use>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+
+    <div class="overlay overlay__hidden"></div>
+</div>
+
+<script src="js/script.min.js"></script>
+</body>
+</html>

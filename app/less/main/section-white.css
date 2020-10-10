@@ -1,0 +1,105 @@
+.reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: none;
+}
+.text-input {
+  font: inherit;
+  box-sizing: border-box;
+  color: black;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  opacity: 1;
+}
+.section-white {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 0 6.25%;
+  margin-bottom: 18px;
+}
+.section-white .section-advantage {
+  width: 100%;
+  padding: 10px 0 16px 50px;
+  background-repeat: no-repeat;
+}
+.section-white .advantage-home {
+  background-image: url(../img/house.svg);
+  background-size: 39px 37px;
+  background-position: 1px 1px;
+  order: 1;
+}
+.section-white .advantage-gift {
+  background-image: url(../img/gift.svg);
+  background-size: 32px 38px;
+  background-position: 5px 0;
+  order: 2;
+}
+.section-white .advantage-food {
+  background-image: url(../img/burger.svg);
+  background-size: 40px 35px;
+  background-position: -1px 5px;
+  order: 3;
+}
+.section-white .section-text,
+.section-white .section-title {
+  text-align: left;
+}
+.section-white .section-text {
+  line-height: 23px;
+}
+.section-white .section-title {
+  margin-bottom: 13px;
+}
+@media screen and (min-width: 768px) {
+  .section-white {
+    padding: 0;
+    margin-bottom: 44px;
+  }
+  .section-white .section-advantage {
+    width: 33.3333%;
+    box-sizing: border-box;
+    padding: 135px 47px 16px;
+  }
+  .section-white .advantage-home {
+    background-size: 75px 72px;
+    background-position: 50% 18%;
+    order: 1;
+  }
+  .section-white .advantage-gift {
+    background-size: 64px 75px;
+    background-position: 50% 17%;
+    order: 3;
+  }
+  .section-white .advantage-food {
+    background-size: 77px 68px;
+    background-position: 50% 20%;
+    order: 2;
+  }
+  .section-white .section-text,
+  .section-white .section-title {
+    text-align: center;
+  }
+  .section-white .section-title {
+    margin-bottom: 19px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section-white {
+    margin-bottom: 64px;
+  }
+  .section-white .advantage-home {
+    background-position: 50% 21%;
+  }
+  .section-white .advantage-gift {
+    background-position: 50% 20%;
+  }
+  .section-white .advantage-food {
+    background-position: 50% 22%;
+  }
+}

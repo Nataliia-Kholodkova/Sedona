@@ -1,0 +1,73 @@
+.reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: none;
+}
+.text-input {
+  font: inherit;
+  box-sizing: border-box;
+  color: black;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  opacity: 1;
+}
+.section-gray {
+  background-color: #eeeeee;
+  padding: 0 6.25%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.section-gray .section-advantage {
+  padding: 26px 17px;
+  border-bottom: 1px solid #d6d6d6;
+  width: 100%;
+}
+.section-gray .section-advantage:last-child {
+  border-bottom: none;
+}
+.section-gray .section-advantage .section-title__dark {
+  margin-bottom: 10px;
+}
+.section-gray .section-advantage .section-text__dark {
+  line-height: 23px;
+}
+.section-gray .section-advantage .section-text__dark span {
+  margin-bottom: 12px;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .section-gray {
+    padding: 0;
+    margin-bottom: 44px;
+  }
+  .section-gray .section-advantage {
+    border-bottom: none;
+    width: 33.3333%;
+    box-sizing: border-box;
+    padding: 46px 50px 41px;
+  }
+  .section-gray .section-advantage .section-title__dark {
+    margin-bottom: 8px;
+  }
+  .section-gray .section-advantage .section-text__dark span {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section-gray {
+    margin-bottom: 44px;
+  }
+  .section-gray .section-advantage {
+    padding: 46px 50px 61px;
+  }
+  .section-gray .section-advantage .section-title__dark {
+    margin-bottom: 9px;
+    padding: 0 72px;
+  }
+}

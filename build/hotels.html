@@ -39,7 +39,8 @@
                     <legend class="section-title section-title__white">ИНФРАСТРУКТУРА:</legend>
                     <div class="wrapper">
                         <label class="filter-label filter-label__checkbox">
-                            <input type="checkbox" class="input input-checkbox__filter visually-hidden" name="waterpool"
+                            <input type="checkbox" class="input input-checkbox__filter visually-hidden"
+                                   name="waterpool" value="бассейн"
                                    checked>
                             <svg class="checkbox-icon checkbox-icon__on" width="27" height="23">
                                 <use xlink:href="img/sprite-svg.svg#checkbox-on-ico"></use>
@@ -52,7 +53,8 @@
                             </span>
                         </label>
                         <label class="filter-label filter-label__checkbox">
-                            <input type="checkbox" class="input input-checkbox__filter visually-hidden" name="parking">
+                            <input type="checkbox" class="input input-checkbox__filter visually-hidden"
+                                   name="parking" value="парковка">
                             <svg class="checkbox-icon checkbox-icon__on" width="27" height="23">
                                 <use xlink:href="img/sprite-svg.svg#checkbox-on-ico"></use>
                             </svg>
@@ -64,7 +66,8 @@
                             </span>
                         </label>
                         <label class="filter-label filter-label__checkbox">
-                            <input type="checkbox" class="input input-checkbox__filter visually-hidden" name="wi-fi">
+                            <input type="checkbox" class="input input-checkbox__filter visually-hidden" name="wi-fi"
+                                   value="wi-fi">
                             <svg class="checkbox-icon checkbox-icon__on" width="27" height="23">
                                 <use xlink:href="img/sprite-svg.svg#checkbox-on-ico"></use>
                             </svg>
@@ -82,6 +85,7 @@
                     <div class="wrapper">
                         <label class="filter-label filter-label__checkbox">
                             <input type="checkbox" class="input input-checkbox__filter visually-hidden" name="hotel"
+                                   value="Гостиница"
                                    checked>
                             <svg class="checkbox-icon checkbox-icon__on" width="27" height="23">
                                 <use xlink:href="img/sprite-svg.svg#checkbox-on-ico"></use>
@@ -95,6 +99,7 @@
                         </label>
                         <label class="filter-label filter-label__checkbox">
                             <input type="checkbox" class="input input-checkbox__filter visually-hidden" name="motel"
+                                   value="Мотель"
                                    checked>
                             <svg class="checkbox-icon checkbox-icon__on" width="27" height="23">
                                 <use xlink:href="img/sprite-svg.svg#checkbox-on-ico"></use>
@@ -107,7 +112,8 @@
                             </span>
                         </label>
                         <label class="filter-label filter-label__checkbox">
-                            <input type="checkbox" class="input input-checkbox__filter visually-hidden" name="apartment"
+                            <input type="checkbox" class="input input-checkbox__filter visually-hidden"
+                                   name="apartment" value="Апартаменты"
                                    checked>
                             <svg class="checkbox-icon checkbox-icon__on" width="27" height="23">
                                 <use xlink:href="img/sprite-svg.svg#checkbox-on-ico"></use>
@@ -124,7 +130,6 @@
                 <fieldset class="fieldset fieldset-price">
                     <legend class="section-title section-title__white">Стоимость в сутки (Р):</legend>
                     <div class="wrapper">
-
                         <div class="values">
                             <div class="range-value range-value__min">
                                 ОТ <span>0</span>
@@ -134,9 +139,14 @@
                             </div>
                         </div>
                         <div class="range">
-                            <div class="range-line"></div>
-                            <img width="20" height="22" class="thumb thumb-min" src="img/filter-button.svg">
-                            <img width="20" height="22" class="thumb thumb-max" src="img/filter-button.svg">
+                            <label class="filter-label filter-label__range">
+                                <input type="range" min="0" max="4500" value="0" step="1"
+                                       class="range-line range-line__min">
+                            </label>
+                            <label class="filter-label filter-label__range">
+                                <input type="range" min="1" max="4499" step="1" value="3000"
+                                       class="range-line range-line__max">
+                            </label>
                         </div>
                         <button type="submit" class="btn btn-white">ПОКАЗАТЬ</button>
                     </div>
@@ -151,110 +161,47 @@
                 <span class="section-text section-text__dark">СОРТИРОВКА:</span>
                 <ul class="sort-list sort-list__features">
                     <li class="sort-item sort-item__active">
-                        <a href="#">ПО ЦЕНЕ</a>
+                        <label>
+                            <input type="radio" class="visually-hidden" name="sorting_type" value="price" checked>
+                            <span class="filter-label">ПО ЦЕНЕ</span>
+                        </label>
                     </li>
                     <li class="sort-item">
-                        <a href="#">ПО ТИПУ</a>
+                        <label>
+                            <input type="radio" class="visually-hidden" name="sorting_type" value="type">
+                            <span class="filter-label">ПО ТИПУ</span>
+                        </label>
                     </li>
                     <li class="sort-item">
-                        <a href="#">ПО РЕЙТИНГУ</a>
+                        <label>
+                            <input type="radio" class="visually-hidden" name="sorting_type" value="rating">
+                            <span class="filter-label">ПО РЕЙТИНГУ</span>
+                        </label>
                     </li>
                 </ul>
                 <ul class="sort-list sort-list__price">
                     <li class="sort-item">
-                        <a href="#">
+                        <label>
+                            <input type="radio" class="visually-hidden" name="asc" value="minFirst">
+                            <span class="visually-hidden">От меньшего</span>
                             <svg width="11" height="10">
                                 <use xlink:href="img/sprite-svg.svg#arrow-up-ico"></use>
                             </svg>
-                        </a>
+                        </label>
                     </li>
                     <li class="sort-item sort-item__active">
-                        <a href="#">
+                        <label>
+                            <input type="radio" class="visually-hidden" name="asc" value="maxFirst" checked>
+                            <span class="visually-hidden">От большего</span>
                             <svg width="11" height="10">
                                 <use xlink:href="img/sprite-svg.svg#arrow-down-ico"></use>
                             </svg>
-                        </a>
+                        </label>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="section section-results">
-            <div class="result">
-                <div class="photo">
-                    <img src="img/filter-photo-1.jpg" srcset="img/filter-photo-1@2x.jpg" width="135" height="90px"
-                         alt="Photo filter 1">
-                </div>
-                <div class="info">
-                    <a class="section-title section-title__dark" href="#">Amara Resort & Spa</a>
-                    <p class="type section-text section-text__dark">Гостиница</p>
-                    <p class="price section-text section-text__dark">ОТ <span>4000</span> Р.</p>
-                    <div class="buttons">
-                        <button type="button" class="btn btn-blue">ПОДРОБНЕЕ</button>
-                        <button type="button" class="btn btn-brown">ЗАБРОНИРОВАТЬ</button>
-                    </div>
-                </div>
-                <div class="rating">
-                    <div class="stars">
-                        <img width="18" height="17" src="img/star.svg" class="star">
-                        <img width="18" height="17" src="img/star.svg" class="star">
-                        <img width="18" height="17" src="img/star.svg" class="star">
-                        <img width="18" height="17" src="img/star.svg" class="star">
-                    </div>
-                    <div class="value">
-                        <p class="section-text section-text__dark">Рейтинг: <span>8,5</span>
-                    </div>
-                </div>
-            </div>
-            <div class="result">
-                <div class="photo">
-                    <img src="img/filter-photo-2.jpg" srcset="img/filter-photo-2@2x.jpg" width="135" height="90px"
-                         alt="Photo filter 2">
-                </div>
-                <div class="info">
-                    <a class="section-title section-title__dark" href="#">Desert Quail Inn</a>
-                    <p class="type section-text section-text__dark">Мотель</p>
-                    <p class="price section-text section-text__dark">ОТ <span>3000</span> Р.</p>
-                    <div class="buttons">
-                        <button type="button" class="btn btn-blue">ПОДРОБНЕЕ</button>
-                        <button type="button" class="btn btn-brown">ЗАБРОНИРОВАТЬ</button>
-                    </div>
-                </div>
-                <div class="rating">
-                    <div class="stars">
-                        <img width="18" height="17" src="img/star.svg" class="star">
-                        <img width="18" height="17" src="img/star.svg" class="star">
-                        <img width="18" height="17" src="img/star.svg" class="star">
-                    </div>
-                    <div class="value">
-                        <p class="section-text section-text__dark">Рейтинг: <span>8,9</span>
-                    </div>
-                </div>
-            </div>
-            <div class="result">
-                <div class="photo">
-                    <img src="img/filter-photo-3.jpg" srcset="img/filter-photo-3@2x.jpg" width="135" height="90px"
-                         alt="Photo filter 3">
-                </div>
-                <div class="info">
-                    <a class="section-title section-title__dark" href="#">Villas at Poco Diablo</a>
-                    <p class="type section-text section-text__dark">Апартаменты</p>
-                    <p class="price section-text section-text__dark">ОТ <span>2000</span> Р.</p>
-                    <div class="buttons">
-                        <button type="button" class="btn btn-blue">ПОДРОБНЕЕ</button>
-                        <button type="button" class="btn btn-brown">ЗАБРОНИРОВАТЬ</button>
-                    </div>
-                </div>
-                <div class="rating">
-                    <div class="stars">
-                        <img width="18" height="17" src="img/star.svg" class="star">
-                        <img width="18" height="17" src="img/star.svg" class="star">
-                    </div>
-                    <div class="value">
-                        <p class="section-text section-text__dark">Рейтинг: <span>9,2</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <section class="section section-results"></section>
     </main>
     <footer class="footer footer__main-page">
         <div class="hash-tag">
@@ -286,6 +233,32 @@
 
     <div class="overlay overlay__hidden"></div>
 </div>
+
+<template id="result" style="display: none">
+    <div class="result">
+        <div class="photo">
+            <img src="img/filter-photo-2.jpg" srcset="img/filter-photo-2@2x.jpg" width="135" height="90px"
+                 alt="Photo filter 2">
+        </div>
+        <div class="info">
+            <a class="section-title section-title__dark" href="#">Desert Quail Inn</a>
+            <p class="type section-text section-text__dark">Мотель</p>
+            <p class="price section-text section-text__dark">ОТ <span>3000</span> Р.</p>
+            <div class="buttons">
+                <button type="button" class="btn btn-blue">ПОДРОБНЕЕ</button>
+                <button type="button" class="btn btn-brown">ЗАБРОНИРОВАТЬ</button>
+            </div>
+        </div>
+        <div class="rating">
+            <div class="stars">
+                <img width="18" height="17" src="img/star.svg" class="star">
+            </div>
+            <div class="value">
+                <p class="section-text section-text__dark">Рейтинг: <span>8,9</span>
+            </div>
+        </div>
+    </div>
+</template>
 
 <script src="js/script.min.js"></script>
 </body>

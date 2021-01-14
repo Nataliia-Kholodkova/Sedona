@@ -1,5 +1,6 @@
 // Определяем переменную "preprocessor"
-let preprocessor = 'less';
+const gulp = require('gulp');
+// let preprocessor = 'sass';
 
 // Определяем константы Gulp
 const {src, dest, parallel, series, watch} = require('gulp');
@@ -14,8 +15,8 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 
 // Подключаем модули gulp-sass и gulp-less
-// const sass = require('gulp-sass');
 const less = require('gulp-less');
+// const less = require('gulp-less');
 
 // Подключаем Autoprefixer
 
@@ -47,22 +48,28 @@ function browsersync() {
 }
 
 function scripts() {
-    return src([ // Берём файлы из источников
-        // 'node_modules/jquery/dist/jquery.min.js', // Пример подключения библиотеки
-        'app/js/script.js', // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
-    ], { allowEmpty: true })
-    // .pipe(concat('script.min.js')) // Конкатенируем в один файл
+    return src([
+            // Берём файлы из источников
+            // 'node_modules/jquery/dist/jquery.min.js', // Пример подключения библиотеки
+            'app/js/script.js',
+            'app/js/hotels_script.js', // Пользовательские скрипты, использующие библиотеку, должны быть
+            // подключены в конце
+        ],
+        { allowEmpty: true }
+    )
+        .pipe(concat('script.min.js')) // Конкатенируем в один файл
+        .pipe(dest('app/js/'))
         .pipe(uglify()) // Сжимаем JavaScript
-        .pipe(rename("script.min.js"))
         .pipe(dest('build/js/')) // Выгружаем готовый файл в папку назначения
         .pipe(browserSync.stream()) // Триггерим Browsersync для обновления страницы
 }
 
 function styles() {
     return src(['app/css/sanitize.css',
-        'app/' + preprocessor + '/styles.' + preprocessor + ''], { allowEmpty: true }) // Выбираем источник: "app/sass/main.sass" или "app/less/main.less"
-        .pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
-        .pipe(concat('styles.css')) // Конкатенируем в файл app.min.js
+        'app/less/styles.less'], { allowEmpty: true }) // Выбираем источник: "app/sass/main.sass" или
+    // "app/less/main.less"
+        .pipe(less()) // Преобразуем значение переменной "preprocessor" в функцию
+        .pipe(concat('style.css')) // Конкатенируем в файл app.min.css
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
         .pipe(dest('app/css'))// Создадим префиксы с помощью Autoprefixer
         .pipe(csso()) // Минифицируем стили
@@ -133,11 +140,16 @@ function buildcopy() {
 }
 
 
-function htmlCopy() {
-    return src('app/**/*.html', {allowEmpty: true})
-        .pipe(dest("build/"))
-        .pipe(browserSync.reload());
-}
+gulp.task("htmlCopy", function() {
+    return gulp.src("app/**/*.html", {allowEmpty: true})
+        .pipe(gulp.dest("build"));
+});
+
+gulp.task("htmlUpdate", gulp.series("htmlCopy", function(done) {
+    browserSync.reload();
+    done();
+}));
+
 
 function cleandist() {
     return del('build/**/*', {force: true}) // Удаляем всё содержимое папки "dist/"
@@ -149,10 +161,10 @@ function startwatch() {
     watch(['app/**/*.js', '!app/**/*.min.js'], series([scripts]));
 
     // Мониторим файлы препроцессора на изменения
-    watch('app/**/' + preprocessor + '/**/*', series([styles]));
+    watch('app/**/less/**/*', series([styles]));
 
     // Мониторим файлы HTML на изменения
-    watch(['app/**/*.html']).on('change', series([htmlCopy]));
+    watch(['app/**/*.html']).on('change', series(['htmlUpdate']));
 
     // Мониторим папку-источник изображений и выполняем images(), если есть изменения
     watch('app/img/src/**/*', series([images, svg, copyImg]));
@@ -175,12 +187,10 @@ exports.copyImg = copyImg;
 // Экспортируем функцию cleanimg() как таск cleanimg
 exports.cleanimg = cleanimg;
 
-exports.htmlCopy = htmlCopy;
-
 exports.svg = svg;
 
 // Создаём новый таск "build", который последовательно выполняет нужные операции
 exports.build = series(cleandist, styles, scripts, images, svg, copyImg, buildcopy);
 
 // Экспортируем дефолтный таск с нужным набором функций
-exports.default = parallel(styles, scripts, images, svg, copyImg, buildcopy, browsersync, startwatch);
+exports.default = parallel(browsersync, startwatch);

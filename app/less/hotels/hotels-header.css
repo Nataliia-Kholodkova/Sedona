@@ -137,38 +137,82 @@
   padding: 10px 20px;
   width: 49%;
 }
+.filter-form .fieldset-price .range-line {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%;
+  position: absolute;
+  top: -9px;
+}
+.filter-form .fieldset-price .range-line:focus {
+  outline: none;
+}
+.filter-form .fieldset-price .range-line::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.filter-form .fieldset-price .range-line::-webkit-slider-thumb {
+  width: 20px;
+  height: 22px;
+  background-image: url("../img/filter-button.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+}
+.filter-form .fieldset-price .range-line::-webkit-slider-thumb:hover {
+  height: 24px;
+  width: 22px;
+  margin-top: -9px;
+}
+.filter-form .fieldset-price .range-line::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.filter-form .fieldset-price .range-line::-moz-range-thumb {
+  width: 20px;
+  height: 22px;
+  background-image: url("../img/filter-button.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+}
+.filter-form .fieldset-price .range-line::-moz-range-thumb:hover {
+  height: 24px;
+  width: 22px;
+  margin-top: -9px;
+}
+.filter-form .fieldset-price .range-line::-ms-track {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.filter-form .fieldset-price .range-line::-ms-thumb {
+  width: 20px;
+  height: 22px;
+  background-image: url("../img/filter-button.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+}
+.filter-form .fieldset-price .range-line::-ms-thumb:hover {
+  height: 24px;
+  width: 22px;
+  margin-top: -9px;
+}
 .filter-form .fieldset-price .range {
   background-color: transparent;
   position: relative;
   height: 24px;
   left: 0;
   width: 100%;
-}
-.filter-form .fieldset-price .range-line {
-  width: 100%;
-  height: 2px;
-  background-color: rgba(255, 255, 255, 0.3);
-  position: relative;
-}
-.filter-form .fieldset-price .range-line::before {
-  content: '';
-  width: 70%;
-  height: 2px;
-  background-color: #fff;
-  position: absolute;
-  left: 0;
-}
-.filter-form .fieldset-price .thumb {
-  position: absolute;
-  transition: 0.3s linear;
-  top: -39%;
-}
-.filter-form .fieldset-price .thumb:hover {
-  height: 24px;
-  width: 22px;
-}
-.filter-form .fieldset-price .thumb-max {
-  left: 70%;
 }
 .filter-form .btn-white {
   width: 100%;
@@ -257,12 +301,6 @@
     padding: 3px 0;
     width: 48%;
     text-align: center;
-  }
-  .filter-form .fieldset-price .range-line::before {
-    width: 83%;
-  }
-  .filter-form .fieldset-price .thumb-max {
-    left: 79%;
   }
   .filter-form .btn-white {
     width: 43%;

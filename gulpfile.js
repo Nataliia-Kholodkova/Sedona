@@ -52,7 +52,8 @@ function scripts() {
             // Берём файлы из источников
             // 'node_modules/jquery/dist/jquery.min.js', // Пример подключения библиотеки
             'app/js/script.js',
-            'app/js/hotels_script.js', // Пользовательские скрипты, использующие библиотеку, должны быть
+            'app/js/hotels_script.js',
+            // Пользовательские скрипты, использующие библиотеку, должны быть
             // подключены в конце
         ],
         { allowEmpty: true }

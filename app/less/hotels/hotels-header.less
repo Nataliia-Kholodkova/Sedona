@@ -28,10 +28,9 @@
   position: relative;
   padding: 44px 6% 10px;
 
-  @media screen and (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/back-hotels-tablet@2x.jpg");
   }
-;
 }
 
 .filter-form {
@@ -89,6 +88,7 @@
       top: 0;
       left: 0;
       transition: 0.3s linear;
+      cursor: pointer;
     }
 
     input {
@@ -106,6 +106,13 @@
 
       &:checked + .checkbox-icon__on {
         opacity: 1;
+      }
+
+      &:hover + .checkbox-icon__on,
+      &:hover ~ .checkbox-icon__off,
+      &:focus + .checkbox-icon__on,
+      &:focus ~ .checkbox-icon__off {
+        box-shadow: -2px 1px 3px 1px rgba(255,255,255,.5);
       }
     }
 
@@ -147,8 +154,6 @@
       width: 49%;
     }
 
-
-
     .range-line {
       -webkit-appearance: none;
       margin: 18px 0;
@@ -178,15 +183,12 @@
       -webkit-appearance: none;
       margin-top: -8px;
 
-      &:hover {
+      &:hover, &:focus {
         height: 24px;
         width: 22px;
         margin-top: -9px;
+        outline: none;
       }
-    }
-
-    .range-line:focus::-webkit-slider-runnable-track {
-      //background: #367ebd;
     }
 
     .range-line::-moz-range-track {
@@ -205,10 +207,11 @@
       -webkit-appearance: none;
       margin-top: -8px;
 
-      &:hover {
+      &:hover, &:focus {
         height: 24px;
         width: 22px;
         margin-top: -9px;
+        outline: none;
       }
     }
 
@@ -228,10 +231,11 @@
       -webkit-appearance: none;
       margin-top: -8px;
 
-      &:hover {
+      &:hover, &:focus {
         height: 24px;
         width: 22px;
         margin-top: -9px;
+        outline: none;
       }
     }
 

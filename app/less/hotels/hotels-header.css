@@ -36,7 +36,7 @@
   position: relative;
   padding: 44px 6% 10px;
 }
-@media screen and (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .section-filter-form {
     background-image: url("../img/back-hotels-tablet@2x.jpg");
   }
@@ -89,6 +89,7 @@
   top: 0;
   left: 0;
   transition: 0.3s linear;
+  cursor: pointer;
 }
 .filter-form .filter-label__checkbox input + .checkbox-icon__on {
   opacity: 0;
@@ -101,6 +102,12 @@
 }
 .filter-form .filter-label__checkbox input:checked + .checkbox-icon__on {
   opacity: 1;
+}
+.filter-form .filter-label__checkbox input:hover + .checkbox-icon__on,
+.filter-form .filter-label__checkbox input:hover ~ .checkbox-icon__off,
+.filter-form .filter-label__checkbox input:focus + .checkbox-icon__on,
+.filter-form .filter-label__checkbox input:focus ~ .checkbox-icon__off {
+  box-shadow: -2px 1px 3px 1px rgba(255, 255, 255, 0.5);
 }
 .filter-form .filter-label__checkbox .checkbox-label {
   padding-left: 50px;
@@ -162,10 +169,12 @@
   -webkit-appearance: none;
   margin-top: -8px;
 }
-.filter-form .fieldset-price .range-line::-webkit-slider-thumb:hover {
+.filter-form .fieldset-price .range-line::-webkit-slider-thumb:hover,
+.filter-form .fieldset-price .range-line::-webkit-slider-thumb:focus {
   height: 24px;
   width: 22px;
   margin-top: -9px;
+  outline: none;
 }
 .filter-form .fieldset-price .range-line::-moz-range-track {
   width: 100%;
@@ -182,10 +191,12 @@
   -webkit-appearance: none;
   margin-top: -8px;
 }
-.filter-form .fieldset-price .range-line::-moz-range-thumb:hover {
+.filter-form .fieldset-price .range-line::-moz-range-thumb:hover,
+.filter-form .fieldset-price .range-line::-moz-range-thumb:focus {
   height: 24px;
   width: 22px;
   margin-top: -9px;
+  outline: none;
 }
 .filter-form .fieldset-price .range-line::-ms-track {
   width: 100%;
@@ -202,10 +213,12 @@
   -webkit-appearance: none;
   margin-top: -8px;
 }
-.filter-form .fieldset-price .range-line::-ms-thumb:hover {
+.filter-form .fieldset-price .range-line::-ms-thumb:hover,
+.filter-form .fieldset-price .range-line::-ms-thumb:focus {
   height: 24px;
   width: 22px;
   margin-top: -9px;
+  outline: none;
 }
 .filter-form .fieldset-price .range {
   background-color: transparent;

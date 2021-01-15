@@ -149,7 +149,7 @@ label, legend, fieldset, figcaption, figure {
   background-color: #f2f2f2;
   border: 4px solid transparent;
 
-  &:hover {
+  &:hover, &:focus {
     background-color: #e5e5e5;
   }
 
@@ -162,7 +162,7 @@ label, legend, fieldset, figcaption, figure {
 .btn-blue {
   .button(@font-size: 21px, @bg_blue);
 
-  &:hover {
+  &:hover, &:focus {
     background-color: @bg-blue__hover;
   }
 
@@ -175,7 +175,7 @@ label, legend, fieldset, figcaption, figure {
 .btn-brown {
   .button(@font-size: 21px, #766357);
 
-  &:hover {
+  &:hover, &:focus {
     background-color: #604e43;
   }
 
@@ -190,7 +190,7 @@ label, legend, fieldset, figcaption, figure {
   font-weight: 400;
   border: 2px solid white;
 
-  &:hover {
+  &:hover, &:focus {
     background-color: white;
     color: black;
   }
@@ -200,8 +200,6 @@ label, legend, fieldset, figcaption, figure {
     color: fade(black, 30%);
   }
 }
-
-
 
 @media screen and (min-width: @tablet-width){
   .section-title__dark {

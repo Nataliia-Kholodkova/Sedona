@@ -71,7 +71,8 @@
   font-size: 21px;
   color: rgba(0, 0, 0, 0.3);
 }
-.form-hotels .label-number div .btn:hover {
+.form-hotels .label-number div .btn:hover,
+.form-hotels .label-number div .btn:focus {
   color: black;
 }
 .form-hotels .label-number div .btn:active {

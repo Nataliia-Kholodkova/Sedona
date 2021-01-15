@@ -36,6 +36,7 @@
   margin: 0 3px;
   transition: 0.3s linear;
   cursor: pointer;
+  position: relative;
 
   &::after {
     content: '';
@@ -45,10 +46,17 @@
     background-position: center;
     background-repeat: no-repeat;
     transition: 0.3s linear;
+    position: absolute;
+    top: 0;
   }
 
-  &:hover {
-    background-color: @bg-blue__hover;
+  a {
+    height: 100%;
+    display: block;
+
+    &:hover, &:focus {
+      background-color: @bg-blue__hover;
+    }
   }
 
   &:active {

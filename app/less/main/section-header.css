@@ -58,7 +58,8 @@
   margin: 32px auto;
   padding: 17px 0;
 }
-.section-head__bottom .btn-blue:hover {
+.section-head__bottom .btn-blue:hover,
+.section-head__bottom .btn-blue:focus {
   background-color: #669ec0;
 }
 .section-head__bottom .btn-blue:active {

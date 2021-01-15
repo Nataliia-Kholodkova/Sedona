@@ -214,7 +214,11 @@ figure {
 .input-text:hover,
 .input-search:hover,
 .input-email:hover,
-.input-tel:hover {
+.input-tel:hover,
+.input-text:focus,
+.input-search:focus,
+.input-email:focus,
+.input-tel:focus {
   background-color: #e5e5e5;
 }
 .input-text:active,
@@ -236,7 +240,8 @@ figure {
   line-height: 26px;
   padding: 16px 0;
 }
-.btn-blue:hover {
+.btn-blue:hover,
+.btn-blue:focus {
   background-color: #669ec0;
 }
 .btn-blue:active {
@@ -251,7 +256,8 @@ figure {
   line-height: 26px;
   padding: 16px 0;
 }
-.btn-brown:hover {
+.btn-brown:hover,
+.btn-brown:focus {
   background-color: #604e43;
 }
 .btn-brown:active {
@@ -268,7 +274,8 @@ figure {
   font-weight: 400;
   border: 2px solid white;
 }
-.btn-white:hover {
+.btn-white:hover,
+.btn-white:focus {
   background-color: white;
   color: black;
 }

@@ -53,6 +53,7 @@
   margin: 0 3px;
   transition: 0.3s linear;
   cursor: pointer;
+  position: relative;
 }
 .social-item::after {
   content: '';
@@ -62,8 +63,15 @@
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.3s linear;
+  position: absolute;
+  top: 0;
 }
-.social-item:hover {
+.social-item a {
+  height: 100%;
+  display: block;
+}
+.social-item a:hover,
+.social-item a:focus {
   background-color: #669ec0;
 }
 .social-item:active {

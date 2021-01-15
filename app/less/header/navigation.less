@@ -78,16 +78,13 @@
     text-align: center;
     padding: 7px 0;
     transition: 0.3s linear;
-  }
 
-  &:hover {
-    background-color: @bg-blue__hover;
-  }
+    &:hover, &:focus {
+      background-color: @bg-blue__hover;
+    }
 
-  &:active {
-    background-color: @bg-blue__active;
-
-    a {
+    &:active {
+      background-color: @bg-blue__active;
       color: fade(white, 30%);
     }
   }
@@ -165,20 +162,14 @@
       line-height: 26px;
       font-weight: 700;
       padding: 14px 0;
-    }
 
-    &:hover {
-      background-color: transparent;
-
-      a {
+      &:hover, &:focus {
+        background-color: transparent;
         color: #81b3d2;
       }
-    }
 
-    &:active {
-      background-color: transparent;
-
-      a {
+      &:active {
+        background-color: transparent;
         color: fade(black, 30%);
       }
     }
@@ -187,16 +178,12 @@
 
       a {
         color: #766357;
-      }
 
-      &:hover {
-        a {
+        &:hover, &:focus {
           color: #604e43;
         }
-      }
 
-      &:active {
-        a {
+        &:active {
           color: fade(#766357, 30%);
         }
       }

@@ -153,7 +153,8 @@
   opacity: 0;
   transition: 0.3s linear;
 }
-.form-reviews .input-radio:hover + .radio-ico {
+.form-reviews .input-radio:hover + .radio-ico,
+.form-reviews .input-radio:focus + .radio-ico {
   background-color: #e5e5e5;
 }
 .form-reviews .input-radio:active + .radio-ico {
@@ -162,7 +163,8 @@
 .form-reviews .input-radio:checked + .radio-ico::after {
   opacity: 1;
 }
-.form-reviews .input-radio:checked:hover + .radio-ico {
+.form-reviews .input-radio:checked:hover + .radio-ico,
+.form-reviews .input-radio:checked:focus + .radio-ico {
   background-color: #e5e5e5;
 }
 .form-reviews .input-radio:checked:active + .radio-ico {
@@ -209,7 +211,8 @@
   opacity: 0;
   transition: 0.3s linear;
 }
-.form-reviews .input-checkbox:hover + .checkbox-ico {
+.form-reviews .input-checkbox:hover + .checkbox-ico,
+.form-reviews .input-checkbox:focus + .checkbox-ico {
   background-color: #e5e5e5;
 }
 .form-reviews .input-checkbox:active + .checkbox-ico {
@@ -218,7 +221,8 @@
 .form-reviews .input-checkbox:checked + .checkbox-ico::after {
   opacity: 1;
 }
-.form-reviews .input-checkbox:checked:hover + .checkbox-ico {
+.form-reviews .input-checkbox:checked:hover + .checkbox-ico,
+.form-reviews .input-checkbox:checked:focus + .checkbox-ico {
   background-color: #e5e5e5;
 }
 .form-reviews .input-checkbox:checked:active + .checkbox-ico {

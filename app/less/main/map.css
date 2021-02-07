@@ -1,0 +1,51 @@
+.reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: none;
+}
+.text-input {
+  font: inherit;
+  box-sizing: border-box;
+  color: black;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  opacity: 1;
+}
+.section-map {
+  height: 350px;
+  background-image: url(../img/map-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% ;
+  background-position: center;
+  position: relative;
+}
+@media screen and (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+  .section-map {
+    background-image: url(../img/map-mobile@2x.jpg);
+  }
+}
+.map-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.mapouter {
+  position: absolute;
+  text-align: right;
+  height: 350px;
+  width: 100%;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 350px;
+  width: 100%;
+}

@@ -1,0 +1,104 @@
+@import "../_variables";
+@import "../_mixins";
+
+.modal__display.search-form__modal {
+  width: 87.5%;
+  top: 137px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.form-hotels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 25px;
+
+  .label {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+
+    span {
+      .title(14px, black);
+      text-transform: uppercase;
+      text-align: left;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  .label-number {
+    width: 45%;
+
+    div {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: #f2f2f2;
+
+      .btn, .input {
+        width: 33.33%;
+        background-color: #f2f2f2;
+        padding: 13px 0;
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      .input {
+        border: none;
+        outline: none;
+        text-align: center;
+      }
+
+      .btn {
+        font-size: 21px;
+        color: fade(black, 30%);
+
+        &:hover, &:focus {
+          color: black;
+        }
+
+        &:active {
+          color: fade(black, 10%);
+        }
+      }
+    }
+  }
+
+  .input-text {
+    max-width: 100%;
+    width: inherit;
+    padding: 10px;
+    padding-right: 26px;
+  }
+
+  .label-text {
+    svg {
+      fill: #a9a9a9;
+      position: absolute;
+      top: 45px;
+      right: 6px;
+    }
+
+    &:hover {
+      svg {
+        fill: black;
+      }
+    }
+
+    &:focus, &:active {
+      svg {
+        fill: fade(black, 30%);
+      }
+    }
+  }
+
+  .btn-blue {
+    width: 100%;
+    padding: 13px 0;
+    margin-top: 35px;
+  }
+}

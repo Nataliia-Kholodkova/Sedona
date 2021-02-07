@@ -1,0 +1,111 @@
+.reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: none;
+}
+.text-input {
+  font: inherit;
+  box-sizing: border-box;
+  color: black;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  opacity: 1;
+}
+.section-cramps {
+  padding: 20px 6%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.section-cramps .section-title__dark {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.sorting {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.sorting .section-text__dark {
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+.sort-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+  outline: none;
+  background: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.sort-list__features {
+  width: 73%;
+}
+.sort-item {
+  border-bottom: 1px dotted #81b3d2;
+  margin-right: 8%;
+  transition: 0.3s linear;
+}
+.sort-item:last-child {
+  margin-right: 0;
+}
+.sort-item label {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.sort-item:hover label {
+  color: #81b3d2;
+}
+.sort-item:active {
+  border-bottom: none;
+}
+.sort-item:active label {
+  color: black;
+}
+.sort-item__active {
+  border-bottom: none;
+}
+.sort-item__active label {
+  color: #81b3d2;
+}
+.sort-list__price {
+  width: 20%;
+  justify-content: flex-end;
+}
+.sort-list__price .sort-item {
+  margin-right: 0;
+  margin-left: 20%;
+  border-bottom: none;
+}
+.sort-list__price .sort-item:first-child {
+  margin-left: 0;
+}
+.sort-list__price .sort-item svg {
+  transition: 0.3s linear;
+  fill: #cacaca;
+}
+.sort-list__price .sort-item:hover svg {
+  fill: black;
+}
+.sort-list__price .sort-item:active svg,
+.sort-list__price .sort-item__active svg {
+  fill: #81b3d2;
+}

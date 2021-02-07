@@ -1,0 +1,118 @@
+@import "../_variables";
+@import "../_mixins";
+
+.section-cramps {
+  padding: 20px 6%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+
+  .section-title__dark {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.sorting {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+
+  .section-text__dark {
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.sort-list {
+  .reset();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  box-sizing: border-box;
+
+  &__features {
+    width: 73%;
+  }
+}
+
+.sort-item {
+
+  border-bottom: 1px dotted @bg_blue;
+  margin-right: 8%;
+  transition: 0.3s linear;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  label {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 18px;
+    color: fade(black, 30%);
+
+  }
+
+  &:hover {
+    label {
+      color: @bg_blue;
+    }
+  }
+
+  &:active {
+
+    border-bottom: none;
+
+    label {
+      color: black;
+    }
+  }
+
+  &__active {
+    border-bottom: none;
+    label {
+      color: @bg_blue;
+    }
+  }
+}
+
+.sort-list__price {
+
+  width: 20%;
+  justify-content: flex-end;
+
+  .sort-item {
+    margin-right: 0;
+    margin-left: 20%;
+    border-bottom: none;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    svg {
+      transition: 0.3s linear;
+      fill: #cacaca
+    }
+
+    &:hover {
+      svg {
+        fill: black;
+      }
+    }
+
+    &:active, &__active {
+      svg {
+        fill: @bg_blue
+      }
+    }
+  }
+}

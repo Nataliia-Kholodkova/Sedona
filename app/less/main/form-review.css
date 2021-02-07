@@ -1,0 +1,250 @@
+.reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: none;
+}
+.text-input {
+  font: inherit;
+  box-sizing: border-box;
+  color: black;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  opacity: 1;
+}
+.section-form {
+  margin-bottom: 36px;
+}
+.form-reviews .field {
+  display: none;
+}
+.form-reviews .section-title__dark {
+  text-align: center;
+  margin-bottom: 22px;
+  padding-top: 17px;
+}
+.form-reviews .fieldset {
+  padding: 1px 0 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.form-reviews .wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 0 6.25%;
+}
+.form-reviews .label {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 18px;
+  position: relative;
+}
+.form-reviews .label:last-child {
+  margin-bottom: 0;
+}
+.form-reviews .label .name {
+  font-size: 14px;
+  line-height: 26px;
+  color: #333333;
+  text-transform: uppercase;
+  text-align: left;
+  display: block;
+  margin-right: 12px;
+}
+.form-reviews .label .radio-label,
+.form-reviews .label .checkbox-label {
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 26px;
+  font-weight: 700;
+  color: black;
+  text-transform: none;
+  text-align: left;
+  display: block;
+  margin-left: 22px;
+}
+.form-reviews .label .input-text,
+.form-reviews .label .input-tel,
+.form-reviews .label .input-email {
+  width: 100%;
+  padding: 13px 18px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: none;
+  outline: none;
+}
+.form-reviews .label .input-text::placeholder,
+.form-reviews .label .input-tel::placeholder,
+.form-reviews .label .input-email::placeholder {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: none;
+}
+.form-reviews .fieldset-contacts {
+  padding-bottom: 27px;
+}
+.form-reviews .fieldset-contacts legend {
+  margin-bottom: 21px;
+}
+.form-reviews .label-mail,
+.form-reviews .label-phone,
+.form-reviews .label-checkbox,
+.form-reviews .label-radio {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 11px;
+}
+.form-reviews .label-mail .name,
+.form-reviews .label-phone .name,
+.form-reviews .label-checkbox .name,
+.form-reviews .label-radio .name {
+  margin-right: 0;
+  margin-left: 21px;
+  margin-bottom: 6px;
+}
+.form-reviews .input-tel,
+.form-reviews .input-email {
+  padding-right: 59px;
+}
+.form-reviews .tel-ico,
+.form-reviews .mail-ico {
+  position: absolute;
+  width: 58px;
+  height: 59px;
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  top: 32px;
+}
+.form-reviews .radio-ico {
+  width: 56px;
+  height: 56px;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: relative;
+  background-color: #f2f2f2;
+  transition: 0.3s linear;
+}
+.form-reviews .radio-ico::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 22px;
+  height: 22px;
+  content: '';
+  display: block;
+  border-radius: 50%;
+  background-color: #333333;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+.form-reviews .input-radio:hover + .radio-ico,
+.form-reviews .input-radio:focus + .radio-ico {
+  background-color: #e5e5e5;
+}
+.form-reviews .input-radio:active + .radio-ico {
+  background-color: #d5d5d5;
+}
+.form-reviews .input-radio:checked + .radio-ico::after {
+  opacity: 1;
+}
+.form-reviews .input-radio:checked:hover + .radio-ico,
+.form-reviews .input-radio:checked:focus + .radio-ico {
+  background-color: #e5e5e5;
+}
+.form-reviews .input-radio:checked:active + .radio-ico {
+  background-color: #d5d5d5;
+}
+.form-reviews .input-radio:checked:active + .radio-ico::after {
+  opacity: 0.3;
+}
+.form-reviews .label-radio {
+  margin-bottom: 12px;
+}
+.form-reviews .label-checkbox {
+  margin-bottom: 24px;
+}
+.form-reviews .fieldset-emotions {
+  padding-bottom: 30px;
+}
+.form-reviews .checkbox-ico {
+  width: 56px;
+  height: 56px;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 7px;
+  position: relative;
+  background-color: #f2f2f2;
+  transition: 0.3s linear;
+}
+.form-reviews .checkbox-ico::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 24px;
+  height: 16px;
+  content: '';
+  display: block;
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+.form-reviews .input-checkbox:hover + .checkbox-ico,
+.form-reviews .input-checkbox:focus + .checkbox-ico {
+  background-color: #e5e5e5;
+}
+.form-reviews .input-checkbox:active + .checkbox-ico {
+  background-color: #d5d5d5;
+}
+.form-reviews .input-checkbox:checked + .checkbox-ico::after {
+  opacity: 1;
+}
+.form-reviews .input-checkbox:checked:hover + .checkbox-ico,
+.form-reviews .input-checkbox:checked:focus + .checkbox-ico {
+  background-color: #e5e5e5;
+}
+.form-reviews .input-checkbox:checked:active + .checkbox-ico {
+  background-color: #d5d5d5;
+}
+.form-reviews .input-checkbox:checked:active + .checkbox-ico::after {
+  opacity: 0.3;
+}
+.form-reviews .fieldset-places {
+  padding-bottom: 26px;
+}
+.form-reviews .fieldset-places legend {
+  margin-bottom: 17px;
+}
+.form-reviews .label-textarea textarea {
+  resize: none;
+  height: 160px;
+}
+.form-reviews .label-textarea legend {
+  margin-bottom: 17px;
+}
+.form-reviews .btn-blue {
+  width: 87.5%;
+  margin: 27px auto 0;
+}

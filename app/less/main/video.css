@@ -1,0 +1,80 @@
+.reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: none;
+}
+.text-input {
+  font: inherit;
+  box-sizing: border-box;
+  color: black;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  opacity: 1;
+}
+.section-video {
+  margin-top: 4px;
+  padding-bottom: 65px;
+  margin-bottom: 39px;
+}
+.video {
+  width: 100%;
+  position: relative;
+}
+.controls {
+  width: 87.5%;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  bottom: -66px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.range {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: relative;
+  width: 100%;
+  height: 45px;
+}
+.line {
+  position: absolute;
+  width: 84%;
+  height: 3px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.tumb {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 41%;
+  left: 21%;
+}
+.buttons {
+  display: flex;
+  width: 100%;
+  padding: 23px 25px;
+  background-color: #f2f2f2;
+  justify-content: flex-end;
+}
+button svg {
+  transition: 0.3s linear;
+}
+.btn-replay {
+  margin-right: auto;
+}
+.btn-fullscreen {
+  margin-left: 29px;
+}

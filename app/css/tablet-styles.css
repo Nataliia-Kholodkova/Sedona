@@ -1,3 +1,23 @@
+.reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: none;
+}
+.text-input {
+  font: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: black;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  opacity: 1;
+}
 @media screen and (min-width: 768px) {
   .section-title__dark {
     font-size: 21px;
@@ -410,26 +430,6 @@
   .buttons button:active svg {
     fill: rgba(51, 51, 51, 0.3);
   }
-}
-.reset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: none;
-  outline: none;
-  background: none;
-}
-.text-input {
-  font: inherit;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: black;
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 700;
-  opacity: 1;
 }
 @media screen and (min-width: 768px) {
   .section-form {

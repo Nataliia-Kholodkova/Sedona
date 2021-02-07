@@ -1,0 +1,46 @@
+@import "../_variables";
+@media screen and (min-width: @desktop-width) {
+
+  .result {
+    padding: 25px 6% 24px;
+  }
+
+  .photo {
+    width: 135px;
+  }
+
+  .info {
+    min-width: 365px;
+
+    .buttons {
+      justify-content: flex-start;
+    }
+
+    .btn {
+      width: 142px;
+      padding: 3px 0;
+
+      &-blue {
+        width: 109px;
+        margin-right: 6px;
+      }
+    }
+  }
+
+  .rating {
+    width: 241px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-end;
+    align-items: flex-end;
+    padding: 5px 0;
+  }
+
+  .value {
+    width: 46%;
+
+    .section-text__dark {
+      padding: 2px 0;
+    }
+  }
+}

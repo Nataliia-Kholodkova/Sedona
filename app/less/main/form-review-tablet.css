@@ -1,0 +1,159 @@
+.reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: none;
+}
+.text-input {
+  font: inherit;
+  box-sizing: border-box;
+  color: black;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  opacity: 1;
+}
+@media screen and (min-width: 768px) {
+  .section-form {
+    margin-bottom: 60px;
+  }
+  .form-reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0 8%;
+  }
+  .form-reviews .field {
+    display: block;
+    width: 50%;
+    text-align: right;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 26px;
+    color: #333333;
+    order: 7;
+    padding: 19px 0 15px;
+  }
+  .form-reviews .section-title__dark {
+    padding-top: 0;
+    margin-bottom: 57px;
+  }
+  .form-reviews .fieldset {
+    padding: 1px 0 24px;
+    border-bottom: none;
+    border-top: 1px solid #e5e5e5;
+    margin-bottom: 41px;
+  }
+  .form-reviews .fieldset-names {
+    order: 2;
+    width: 50%;
+    border-top: none;
+    border-left: 1px solid #e5e5e5;
+  }
+  .form-reviews .fieldset-names legend {
+    text-align: left;
+    margin-left: 57px;
+  }
+  .form-reviews .fieldset-names .label {
+    padding-left: 57px;
+  }
+  .form-reviews .wrapper {
+    padding: 0;
+  }
+  .form-reviews .label {
+    margin-bottom: 19px;
+  }
+  .form-reviews .label .name {
+    margin-right: 14px;
+  }
+  .form-reviews .label .radio-labe {
+    margin-left: 18px;
+  }
+  .form-reviews .label .checkbox-label {
+    margin-left: 22px;
+  }
+  .form-reviews .fieldset-contacts {
+    order: 3;
+    padding-bottom: 11px;
+  }
+  .form-reviews .fieldset-contacts legend {
+    margin-bottom: 24px;
+    padding: 0 9%;
+  }
+  .form-reviews .label-mail,
+  .form-reviews .label-phone,
+  .form-reviews .label-checkbox,
+  .form-reviews .label-radio {
+    margin-bottom: 23px;
+  }
+  .form-reviews .label-mail .name,
+  .form-reviews .label-phone .name,
+  .form-reviews .label-checkbox .name,
+  .form-reviews .label-radio .name {
+    margin-right: 0;
+    margin-left: 21px;
+    margin-bottom: 6px;
+  }
+  .form-reviews .input-tel,
+  .form-reviews .input-email {
+    padding-right: 59px;
+  }
+  .form-reviews .label-radio {
+    margin-bottom: 23px;
+  }
+  .form-reviews .label-checkbox {
+    margin-bottom: 31px;
+    width: 40%;
+    padding-left: 30px;
+  }
+  .form-reviews .label-checkbox:last-child {
+    margin-bottom: 31px;
+    order: 4;
+  }
+  .form-reviews .label-checkbox:first-child {
+    order: 1;
+  }
+  .form-reviews .label-checkbox:nth-child(2) {
+    order: 3;
+  }
+  .form-reviews .label-checkbox:nth-child(3) {
+    order: 2;
+  }
+  .form-reviews .fieldset-emotions {
+    order: 1;
+    padding-bottom: 30px;
+    width: 50%;
+    border-top: none;
+  }
+  .form-reviews .fieldset-emotions legend {
+    text-align: left;
+  }
+  .form-reviews .fieldset-places {
+    order: 4;
+    padding-bottom: 0;
+  }
+  .form-reviews .fieldset-places legend {
+    width: 62%;
+    margin-bottom: 39px;
+  }
+  .form-reviews .fieldset-places .wrapper {
+    justify-content: center;
+  }
+  .form-reviews .fieldset-textarea {
+    order: 5;
+    width: 100%;
+    margin-bottom: 33px;
+  }
+  .form-reviews .fieldset-textarea legend {
+    padding: 0 12%;
+    margin-bottom: 56px;
+  }
+  .form-reviews .btn-blue {
+    order: 6;
+    width: 50%;
+    margin: 0;
+  }
+}

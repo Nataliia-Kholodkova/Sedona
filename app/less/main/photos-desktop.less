@@ -1,0 +1,43 @@
+@import "../_variables";
+@media screen and (min-width: @desktop-width){
+  .main-image, .image {
+    padding: 22px 0 0;
+  }
+
+  .section-gallery {
+    padding: 0;
+  }
+
+  figure {
+    position: relative;
+  }
+
+  figcaption {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    padding: 16px 21px;
+    bottom: 0;
+  }
+
+  .author, .title, .likes span {
+    color: white;
+  }
+
+  .likes {
+    a {
+      svg {
+        fill: white
+      }
+    }
+  }
+
+  .image {
+    padding: 0;
+    width: 33.33%;
+
+    figcaption {
+      padding: 16px 21px;
+    }
+  }
+}

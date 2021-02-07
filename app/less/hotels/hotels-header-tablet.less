@@ -1,0 +1,79 @@
+@import "../_variables";
+@media screen and (min-width: @tablet-width){
+
+  .section-filter-form {
+    margin-top: -28px;
+    padding: 27px 5.8% 7px;
+  }
+
+  .filter-form {
+
+    .section-title__white {
+      font-size: 16px;
+      text-align: left;
+    }
+
+    .filter-label {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .fieldset {
+      margin-bottom: 0;
+      width: 28%;
+      margin-right: auto;
+
+      &:last-child {
+        margin-bottom: 0;
+        margin-right: 0;
+      }
+
+      &:nth-child(2) {
+        width: 25%;
+      }
+    }
+
+    .filter-label__checkbox {
+      font-size: 14px;
+      position: relative;
+      margin-bottom: 25px;
+
+      .checkbox-label {
+        padding-left: 41px;
+      }
+    }
+
+    .fieldset-price {
+
+      width: 32.6%;
+
+      .section-title__white {
+        margin-bottom: 11px;
+      }
+
+      .values {
+        margin-bottom: 20px;
+        box-sizing: border-box;
+
+        &::after {
+          width: 2px;
+          height: 72%;
+        }
+      }
+
+      .range-value {
+        box-sizing: border-box;
+        padding: 3px 0;
+        width: 48%;
+        text-align: center;
+
+      }
+    }
+
+    .btn-white {
+      width: 63%;
+      padding: 3px 0;
+      margin: 11px auto 0;
+    }
+  }
+}

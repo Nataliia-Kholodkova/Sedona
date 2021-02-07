@@ -1,0 +1,49 @@
+@media screen and (min-width: 768px) {
+  .modal__display.search-form__modal {
+    width: 568px;
+    top: 120px;
+  }
+  .form-hotels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 55px;
+  }
+  .form-hotels .label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .form-hotels .label span {
+    margin-bottom: 0;
+  }
+  .form-hotels .label-number__adults {
+    width: 226px;
+  }
+  .form-hotels .label-number__children {
+    width: 178px;
+  }
+  .form-hotels .label-number div {
+    display: flex;
+    justify-content: flex-start;
+    width: 114px;
+    background-color: #f2f2f2;
+  }
+  .form-hotels .label-number div .btn,
+  .form-hotels .label-number div .input {
+    padding: 7px 0;
+  }
+  .form-hotels .input-text {
+    width: 348px;
+    padding: 6px 30px 5px 10px;
+  }
+  .form-hotels .label-text svg {
+    top: 7px;
+    right: 9px;
+  }
+  .form-hotels .btn-blue {
+    padding: 16px 0;
+    margin-top: 22px;
+  }
+}

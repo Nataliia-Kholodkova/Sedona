@@ -1,0 +1,14 @@
+@media screen and (min-width: 1280px) {
+  .section-white {
+    margin-bottom: 64px;
+  }
+  .section-white .advantage-home {
+    background-position: 50% 21%;
+  }
+  .section-white .advantage-gift {
+    background-position: 50% 20%;
+  }
+  .section-white .advantage-food {
+    background-position: 50% 22%;
+  }
+}

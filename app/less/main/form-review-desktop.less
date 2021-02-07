@@ -1,0 +1,152 @@
+@import "../_variables";
+@import "../_mixins";
+@media screen and (min-width: @desktop-width){
+  .section-form {
+    margin-bottom: 65px;
+  }
+
+  .form-reviews {
+    padding: 0 10%;
+
+    .field {
+      display: block;
+      width: 50%;
+      text-align: right;
+      .paragraph(14px, #333333);
+      order: 7;
+      padding: 19px 0 15px;
+    }
+
+    .section-title__dark {
+      padding-top: 0;
+      margin-bottom: 57px;
+    }
+
+    .fieldset-names {
+
+      legend {
+        margin-left: 78px;
+      }
+
+      .label {
+        padding-left: 79px;
+      }
+    }
+
+    .wrapper {
+      padding: 0;
+    }
+
+    .label {
+      margin-bottom: 19px;
+
+      .name {
+        margin-right: 14px;
+      }
+
+      .radio-labe {
+        margin-left: 18px;
+      }
+
+      .checkbox-label {
+        margin-left: 22px;
+      }
+    }
+
+    .fieldset-contacts {
+      width: 100%;
+      padding-bottom: 11px;
+
+
+      legend {
+        margin-bottom: 72px;
+        padding: 0 6%;
+      }
+
+      .wrapper {
+        justify-content: space-between;
+      }
+    }
+
+    .label-mail, .label-phone, .label-checkbox, .label-radio {
+      margin-bottom: 23px;
+
+      .name{
+        margin-right: 16px;
+        margin-left: 0;
+        margin-bottom: 0;
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    .label-phone, .label-mail {
+      width: 480px;
+      margin-bottom: 0;
+      flex-wrap: nowrap;
+
+      .name {
+        margin-left: 0;
+        width: auto;
+      }
+
+      .input-tel, .input-email {
+        padding-right: 59px;
+        width: 316px;
+      }
+    }
+
+    .tel-ico, .mail-ico {
+      right: 0;
+      top: 0;
+    }
+
+    .tel-ico {
+      right: 79px;
+    }
+
+    .label-radio {
+      margin-bottom: 22px;
+    }
+
+    .label-checkbox {
+      margin-bottom: 0;
+      width: 25%;
+      padding-left: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:not(:first-child) {
+        padding-left: 37px;
+      }
+
+      &:nth-child(3) {
+        padding-left: 19px;
+      }
+    }
+
+    .fieldset-emotions {
+      padding-bottom: 28px;
+
+      legend {
+        text-align: left;
+        margin-left: 80px;
+      }
+    }
+
+    .fieldset-places {
+
+      width: 100%;
+      margin-bottom: 67px;
+
+      legend {
+        width: 42%;
+        margin-bottom: 42px;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import "../_variables";
+@media screen and (min-width: @tablet-width) {
+  .section-map {
+    background-image: url(../img/map-tablet.jpg);
+
+    @media screen and (min-resolution: @retina-dppx), (min-resolution: @retina-dpi) {
+      background-image: url(../img/map-tablet@2x.jpg);
+    }
+  }
+}

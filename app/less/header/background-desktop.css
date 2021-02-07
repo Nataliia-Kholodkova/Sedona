@@ -1,0 +1,23 @@
+@media screen and (min-width: 1280px) {
+  .background {
+    background-image: url("../img/back-desktop.jpg");
+    margin-top: -39px;
+  }
+  .background-photos {
+    height: 301px;
+    background-position: center bottom;
+  }
+  .background-photos img {
+    top: -19px;
+    width: 461px;
+    height: 80px;
+  }
+  .navigation__closed + .background {
+    margin-top: -39px;
+  }
+}
+@media screen and (min-width: 1280px) and (min-resolution: 144dpi), screen and (min-width: 1280px) and (min-resolution: 1.5dppx) {
+  .background {
+    background-image: url("../img/back-desktop@2x.jpg");
+  }
+}

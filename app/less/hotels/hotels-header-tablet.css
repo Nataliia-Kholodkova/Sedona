@@ -1,0 +1,59 @@
+@media screen and (min-width: 768px) {
+  .section-filter-form {
+    margin-top: -28px;
+    padding: 27px 5.8% 7px;
+  }
+  .filter-form .section-title__white {
+    font-size: 16px;
+    text-align: left;
+  }
+  .filter-form .filter-label {
+    margin-right: 0;
+    width: 100%;
+  }
+  .filter-form .fieldset {
+    margin-bottom: 0;
+    width: 28%;
+    margin-right: auto;
+  }
+  .filter-form .fieldset:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  .filter-form .fieldset:nth-child(2) {
+    width: 25%;
+  }
+  .filter-form .filter-label__checkbox {
+    font-size: 14px;
+    position: relative;
+    margin-bottom: 25px;
+  }
+  .filter-form .filter-label__checkbox .checkbox-label {
+    padding-left: 41px;
+  }
+  .filter-form .fieldset-price {
+    width: 32.6%;
+  }
+  .filter-form .fieldset-price .section-title__white {
+    margin-bottom: 11px;
+  }
+  .filter-form .fieldset-price .values {
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  .filter-form .fieldset-price .values::after {
+    width: 2px;
+    height: 72%;
+  }
+  .filter-form .fieldset-price .range-value {
+    box-sizing: border-box;
+    padding: 3px 0;
+    width: 48%;
+    text-align: center;
+  }
+  .filter-form .btn-white {
+    width: 63%;
+    padding: 3px 0;
+    margin: 11px auto 0;
+  }
+}

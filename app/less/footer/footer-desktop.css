@@ -1,0 +1,14 @@
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding: 3% 3.75% 3% 11%;
+  }
+  .hash-tag {
+    width: 267px;
+  }
+  .social-list {
+    width: 400px;
+  }
+  .developped {
+    width: 356px;
+  }
+}

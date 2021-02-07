@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск отелей</title>
+    <meta name="description" content="Sedona page with photos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="fonts/ptsans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsans-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsans-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsans-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/sanitize.min.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/tablet-styles.min.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="css/desktop-styles.min.css" media="(min-width: 1280px)">
+</head>
+<body>
+<div class="container">
+    <header class="header header__hotels-page">
+        <nav class="navigation navigation__js">
+            <button type="button" class="btn btn-menu btn-menu__open" name="open_menu"><span class="visually-hidden">Open menu</span>
+            </button>
+            <button type="button" class="btn btn-menu btn-menu__close" name="close_menu"><span class="visually-hidden">Close menu></span>
+            </button>
+            <ul class="navigation-list">
+                <li class="navigation-item"><a href="index.html">Главная</a></li>
+                <li class="navigation-item"><a href="photos.html">фото и видео</a></li>
+                <li class="navigation-item"><a href="forms.html">Форма отзыва</a></li>
+                <li class="navigation-item navigation-item__active"><a href="#">гостиницы</a></li>
+                <li class="navigation-item navigation-item__logo"><a href="index.html">
+                    <picture>
+                        <source srcset="img/logo-desktop.svg" media="(min-width: 1280px)">
+                        <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
+                        <img src="img/logo-mobile.svg" class="logo" width="102" height="83" alt="Sedona logo">
+                    </picture>
+                </a></li>
+            </ul>
+        </nav>
+        <section class="section section-filter-form">
+            <form class="filter-form" method="get" action="#">
+                <fieldset class="fieldset fieldset-checkbox fieldset-infrastructure">
+                    <legend class="section-title section-title__white">ИНФРАСТРУКТУРА:</legend>
+                    <div class="wrapper">
+                        <label class="filter-label filter-label__checkbox">
+                            <input type="checkbox" class="input input-checkbox__filter visually-hidden"
+                                   name="waterpool" value="бассейн"
+                                   checked>
+                            <svg class="checkbox-icon checkbox-icon__on" width="27" height="23">
+                                <use xlink:href="img/sprite-svg.svg#checkbox-on-ico"></use>
+                            </svg>
+                            <svg class="checkbox-icon checkbox-icon__off" width="23" height="23">
+                                <use xlink:href="img/sprite-svg.svg#checkbox-off-ico"></use>
+                            </svg>
+                            <span class="checkbox-label">
+                                БАССЕЙН
+                            </span>
+                        </label>
+                        <label class="filter-label filter-label__checkbox">
+                            <input type="checkbox" class="input input-checkbox__filter visually-hidden"
+                                   name="parking" value="парковка">
+                            <svg class="checkbox-icon checkbox-icon__on" width="27" height="23">
+                                <use xlink:href="img/sprite-svg.svg#checkbox-on-ico"></use>
+                            </svg>
+                            <svg class="checkbox-icon checkbox-icon__off" width="23" height="23">
+                                <use xlink:href="img/sprite-svg.svg#checkbox-off-ico"></use>
+                            </svg>
+                            <span class="checkbox-label">
+                                ПАРКОВКА
+                            </span>
+                        </label>
+                        <label class="filter-label filter-label__checkbox">
+                            <input type="checkbox" class="input input-checkbox__filter visually-hidden" name="wi-fi"
+                                   value="wi-fi">
+                            <svg class="checkbox-icon checkbox-icon__on" width="27" height="23">
+                                <use xlink:href="img/sprite-svg.svg#checkbox-on-ico"></use>
+                            </svg>
+                            <svg class="checkbox-icon checkbox-icon__off" width="23" height="23">
+                                <use xlink:href="img/sprite-svg.svg#checkbox-off-ico"></use>
+                            </svg>
+                            <span class="checkbox-label">
+                                Wi-Fi
+                            </span>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="fieldset fieldset-checkbox fieldset-apartment">
+                    <legend class="section-title section-title__white">Тип жилья:</legend>
+                    <div class="wrapper">
+                        <label class="filter-label filter-label__checkbox">
+                            <input type="checkbox" class="input input-checkbox__filter visually-hidden" name="hotel"
+                                   value="Гостиница"
+                                   checked>
+                            <svg class="checkbox-icon checkbox-icon__on" width="27" height="23">
+                                <use xlink:href="img/sprite-svg.svg#checkbox-on-ico"></use>
+                            </svg>
+                            <svg class="checkbox-icon checkbox-icon__off" width="23" height="23">
+                                <use xlink:href="img/sprite-svg.svg#checkbox-off-ico"></use>
+                            </svg>
+                            <span class="checkbox-label">
+                                ГостиницА
+                            </span>
+                        </label>
+                        <label class="filter-label filter-label__checkbox">
+                            <input type="checkbox" class="input input-checkbox__filter visually-hidden" name="motel"
+                                   value="Мотель"
+                                   checked>
+                            <svg class="checkbox-icon checkbox-icon__on" width="27" height="23">
+                                <use xlink:href="img/sprite-svg.svg#checkbox-on-ico"></use>
+                            </svg>
+                            <svg class="checkbox-icon checkbox-icon__off" width="23" height="23">
+                                <use xlink:href="img/sprite-svg.svg#checkbox-off-ico"></use>
+                            </svg>
+                            <span class="checkbox-label">
+                                МОТЕЛЬ
+                            </span>
+                        </label>
+                        <label class="filter-label filter-label__checkbox">
+                            <input type="checkbox" class="input input-checkbox__filter visually-hidden"
+                                   name="apartment" value="Апартаменты"
+                                   checked>
+                            <svg class="checkbox-icon checkbox-icon__on" width="27" height="23">
+                                <use xlink:href="img/sprite-svg.svg#checkbox-on-ico"></use>
+                            </svg>
+                            <svg class="checkbox-icon checkbox-icon__off" width="23" height="23">
+                                <use xlink:href="img/sprite-svg.svg#checkbox-off-ico"></use>
+                            </svg>
+                            <span class="checkbox-label">
+                                АПАРТАМЕНТЫ
+                            </span>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="fieldset fieldset-price">
+                    <legend class="section-title section-title__white">Стоимость в сутки (Р):</legend>
+                    <div class="wrapper">
+                        <div class="values">
+                            <div class="range-value range-value__min">
+                                ОТ <span>0</span>
+                            </div>
+                            <div class="range-value range-value__max">
+                                ДО <span>3000</span>
+                            </div>
+                        </div>
+                        <div class="range">
+                            <label class="filter-label filter-label__range">
+                                <input type="range" min="0" max="4500" value="0" step="1"
+                                       class="range-line range-line__min">
+                            </label>
+                            <label class="filter-label filter-label__range">
+                                <input type="range" min="1" max="4499" step="1" value="3000"
+                                       class="range-line range-line__max">
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-white">ПОКАЗАТЬ</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </header>
+    <main class="main main__main-hotels">
+        <section class="section section-cramps">
+            <h2 class="section-title section-title__dark">Найдено: <span>3</span></h2>
+            <div class="sorting">
+                <span class="section-text section-text__dark">СОРТИРОВКА:</span>
+                <ul class="sort-list sort-list__features">
+                    <li class="sort-item sort-item__active">
+                        <label>
+                            <input type="radio" class="visually-hidden" name="sorting_type" value="price" checked>
+                            <span class="filter-label">ПО ЦЕНЕ</span>
+                        </label>
+                    </li>
+                    <li class="sort-item">
+                        <label>
+                            <input type="radio" class="visually-hidden" name="sorting_type" value="type">
+                            <span class="filter-label">ПО ТИПУ</span>
+                        </label>
+                    </li>
+                    <li class="sort-item">
+                        <label>
+                            <input type="radio" class="visually-hidden" name="sorting_type" value="rating">
+                            <span class="filter-label">ПО РЕЙТИНГУ</span>
+                        </label>
+                    </li>
+                </ul>
+                <ul class="sort-list sort-list__price">
+                    <li class="sort-item">
+                        <label>
+                            <input type="radio" class="visually-hidden" name="asc" value="minFirst">
+                            <span class="visually-hidden">От меньшего</span>
+                            <svg width="11" height="10">
+                                <use xlink:href="img/sprite-svg.svg#arrow-up-ico"></use>
+                            </svg>
+                        </label>
+                    </li>
+                    <li class="sort-item sort-item__active">
+                        <label>
+                            <input type="radio" class="visually-hidden" name="asc" value="maxFirst" checked>
+                            <span class="visually-hidden">От большего</span>
+                            <svg width="11" height="10">
+                                <use xlink:href="img/sprite-svg.svg#arrow-down-ico"></use>
+                            </svg>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section section-results"></section>
+    </main>
+    <footer class="footer footer__main-page">
+        <div class="hash-tag">
+            <h2 class="section-title section-title__dark">
+                #visitSEDONA
+            </h2>
+        </div>
+
+        <ul class="social-list">
+            <li class="social-item social-item__twitter"><a href="#"><span class="visually-hidden">Twitter</span></a>
+            </li>
+            <li class="social-item social-item__facebook"><a href="#"><span class="visually-hidden">Facebook</span></a>
+            </li>
+            <li class="social-item social-item__youtube"><a href="#"><span class="visually-hidden">Youtube</span></a>
+            </li>
+        </ul>
+
+        <div class="developped">
+
+            <a class="link link-academy" href="#">Разработано
+                <svg>
+
+                    <use xlink:href="img/sprite-svg.svg#accademy-ico" width="27" height="34"></use>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+
+    <div class="overlay overlay__hidden"></div>
+</div>
+
+<template id="result" style="display: none">
+    <div class="result">
+        <div class="photo">
+            <img src="img/filter-photo-2.jpg" srcset="img/filter-photo-2@2x.jpg" width="135" height="90px"
+                 alt="Photo filter 2">
+        </div>
+        <div class="info">
+            <a class="section-title section-title__dark" href="#">Desert Quail Inn</a>
+            <p class="type section-text section-text__dark">Мотель</p>
+            <p class="price section-text section-text__dark">ОТ <span>3000</span> Р.</p>
+            <div class="buttons">
+                <button type="button" class="btn btn-blue">ПОДРОБНЕЕ</button>
+                <button type="button" class="btn btn-brown">ЗАБРОНИРОВАТЬ</button>
+            </div>
+        </div>
+        <div class="rating">
+            <div class="stars">
+                <img width="18" height="17" src="img/star.svg" class="star">
+            </div>
+            <div class="value">
+                <p class="section-text section-text__dark">Рейтинг: <span>8,9</span>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script src="js/script.min.js"></script>
+</body>
+</html>

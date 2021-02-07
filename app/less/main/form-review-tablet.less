@@ -1,0 +1,164 @@
+@import "../_variables";
+@import "../_mixins";
+@media screen and (min-width: @tablet-width){
+  .section-form {
+    margin-bottom: 60px;
+  }
+
+  .form-reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0 8%;
+
+    .field {
+      display: block;
+      width: 50%;
+      text-align: right;
+      .paragraph(14px, #333333);
+      order: 7;
+      padding: 19px 0 15px;
+    }
+
+    .section-title__dark {
+      padding-top: 0;
+      margin-bottom: 57px;
+    }
+
+    .fieldset {
+      padding: 1px 0 24px;
+      border-bottom: none;
+      border-top: 1px solid #e5e5e5;
+      margin-bottom: 41px;
+    }
+
+    .fieldset-names {
+      order: 2;
+      width: 50%;
+      border-top: none;
+      border-left: 1px solid #e5e5e5;
+
+      legend {
+        text-align: left;
+        margin-left: 57px;
+      }
+
+      .label {
+        padding-left: 57px;
+      }
+    }
+
+    .wrapper {
+      padding: 0;
+    }
+
+    .label {
+      margin-bottom: 19px;
+
+      .name {
+        margin-right: 14px;
+      }
+
+      .radio-labe {
+        margin-left: 18px;
+      }
+
+      .checkbox-label {
+        margin-left: 22px;
+      }
+    }
+
+    .fieldset-contacts {
+      order: 3;
+      padding-bottom: 11px;
+
+      legend {
+        margin-bottom: 24px;
+        padding: 0 9%;
+      }
+    }
+
+    .label-mail, .label-phone, .label-checkbox, .label-radio {
+      margin-bottom: 23px;
+
+      .name {
+        margin-right: 0;
+        margin-left: 21px;
+        margin-bottom: 6px;
+      }
+    }
+
+    .input-tel, .input-email {
+      padding-right: 59px;
+    }
+
+    .label-radio {
+      margin-bottom: 23px;
+    }
+
+    .label-checkbox {
+      margin-bottom: 31px;
+      width: 40%;
+      padding-left: 30px;
+
+      &:last-child {
+        margin-bottom: 31px;
+        order: 4
+      }
+
+      &:first-child {
+        order: 1;
+      }
+
+      &:nth-child(2) {
+        order: 3;
+      }
+
+      &:nth-child(3) {
+        order: 2;
+      }
+    }
+
+    .fieldset-emotions {
+      order: 1;
+      padding-bottom: 30px;
+      width: 50%;
+      border-top: none;
+
+      legend {
+        text-align: left;
+      }
+    }
+
+    .fieldset-places {
+      order: 4;
+      padding-bottom: 0;
+
+      legend {
+        width: 62%;
+        margin-bottom: 39px;
+      }
+
+      .wrapper {
+        justify-content: center;
+      }
+    }
+
+    .fieldset-textarea {
+      order: 5;
+      width: 100%;
+      margin-bottom: 33px;
+
+      legend {
+        padding: 0 12%;
+        margin-bottom: 56px;
+      }
+    }
+
+    .btn-blue {
+      order: 6;
+      width: 50%;
+      margin: 0;
+    }
+  }
+}

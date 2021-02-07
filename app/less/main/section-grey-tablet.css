@@ -1,0 +1,18 @@
+@media screen and (min-width: 768px) {
+  .section-gray {
+    padding: 0;
+    margin-bottom: 44px;
+  }
+  .section-gray .section-advantage {
+    border-bottom: none;
+    width: 33.3333%;
+    box-sizing: border-box;
+    padding: 46px 50px 41px;
+  }
+  .section-gray .section-advantage .section-title__dark {
+    margin-bottom: 8px;
+  }
+  .section-gray .section-advantage .section-text__dark span {
+    margin-bottom: 20px;
+  }
+}

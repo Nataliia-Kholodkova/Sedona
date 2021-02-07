@@ -1,0 +1,30 @@
+@media screen and (min-width: 1280px) {
+  .section-filter-form {
+    margin-top: -40px;
+    padding: 27px 6% 7px;
+  }
+  .filter-form .fieldset {
+    width: 254px;
+    margin-right: 0;
+  }
+  .filter-form .fieldset:nth-child(2) {
+    width: 241px;
+  }
+  .filter-form .fieldset-price {
+    width: 318px;
+    margin-left: auto;
+  }
+  .filter-form .fieldset-price .section-title__white {
+    margin-bottom: 10px;
+  }
+  .filter-form .fieldset-price .range-value {
+    box-sizing: border-box;
+    padding: 3px 0;
+    width: 48%;
+    text-align: center;
+  }
+  .filter-form .btn-white {
+    width: 43%;
+    margin: 11px 96px 0 auto;
+  }
+}

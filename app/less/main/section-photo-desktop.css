@@ -1,0 +1,12 @@
+@media screen and (min-width: 1280px) {
+  .section-photo .section-description__blue {
+    padding: 51px 56px 40px;
+  }
+  .section-photo .section-title__white {
+    padding: 0 34px;
+    margin-bottom: 10px;
+  }
+  .section-bridge .section-description__blue {
+    padding: 54px 83px 40px;
+  }
+}

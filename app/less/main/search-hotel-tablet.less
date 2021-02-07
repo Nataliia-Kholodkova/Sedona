@@ -1,0 +1,63 @@
+@import "../_variables";
+@media screen and (min-width: @tablet-width) {
+  .modal__display.search-form__modal {
+    width: 568px;
+    top: 120px;
+  }
+
+  .form-hotels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 55px;
+
+    .label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      span {
+        margin-bottom: 0;
+      }
+    }
+
+    .label-number {
+      &__adults {
+        width: 226px;
+      }
+
+      &__children {
+        width: 178px;
+      }
+
+      div {
+        display: flex;
+        justify-content: flex-start;
+        width: 114px;
+        background-color: #f2f2f2;
+
+        .btn, .input {
+          padding: 7px 0;
+        }
+      }
+    }
+
+    .input-text {
+      width: 348px;
+      padding: 6px 30px 5px 10px;
+    }
+
+    .label-text {
+      svg {
+        top: 7px;
+        right: 9px;
+      }
+    }
+
+    .btn-blue {
+      padding: 16px 0;
+      margin-top: 22px;
+    }
+  }
+}

@@ -66,15 +66,20 @@ function scripts() {
 }
 
 function styles() {
-    return src(['app/css/sanitize.css',
-        'app/less/styles.less'], { allowEmpty: true }) // Выбираем источник: "app/sass/main.sass" или
+    return src(['app/css/sanitize.css', 'app/less/common.less',
+        'app/less/styles.less', 'app/less/tablet-styles.less', 'app/less/desktop-styles.less'], { allowEmpty: true }) // Выбираем
+    // источник:
+    // "app/sass/main.sass" или
     // "app/less/main.less"
         .pipe(less()) // Преобразуем значение переменной "preprocessor" в функцию
-        .pipe(concat('style.css')) // Конкатенируем в файл app.min.css
+        // .pipe(concat('style.css')) // Конкатенируем в файл app.min.css
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
         .pipe(dest('app/css'))// Создадим префиксы с помощью Autoprefixer
         .pipe(csso()) // Минифицируем стили
-        .pipe(rename('style.min.css'))
+        // .pipe(rename('style.min.css'))
+        .pipe(rename({
+            suffix: '.min',
+        }))
         .pipe(dest('app/css/')) // Выгрузим результат в папку "app/css/"
         .pipe(dest('build/css/'))
         .pipe(browserSync.stream()); // Сделаем инъекцию в браузер

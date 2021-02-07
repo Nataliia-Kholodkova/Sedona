@@ -52,39 +52,3 @@
 .section-bridge .section-description__blue {
   padding: 40px 20px 37px;
 }
-@media screen and (min-width: 768px) {
-  .section-photo .section-description__blue {
-    padding: 46px 43px 40px;
-    width: 33%;
-    box-sizing: border-box;
-  }
-  .section-photo .section-title__white {
-    margin-bottom: 9px;
-  }
-  .section-photo .section-text__white span {
-    margin-bottom: 19px;
-  }
-  .section-photo .section-image {
-    width: 67%;
-    max-height: 256px;
-  }
-  .section-photo .section-image img {
-    height: 256px;
-  }
-  .section-bridge .section-description__blue {
-    padding-top: 45px;
-    order: 1;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .section-photo .section-description__blue {
-    padding: 51px 56px 40px;
-  }
-  .section-photo .section-title__white {
-    padding: 0 34px;
-    margin-bottom: 10px;
-  }
-  .section-bridge .section-description__blue {
-    padding: 54px 83px 40px;
-  }
-}

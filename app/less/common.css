@@ -283,19 +283,3 @@ figure {
   background-color: white;
   color: rgba(0, 0, 0, 0.3);
 }
-@media screen and (min-width: 768px) {
-  .section-title__dark {
-    font-size: 21px;
-    text-transform: uppercase;
-    line-height: 26px;
-    font-weight: 700;
-    color: black;
-  }
-  .section-title__white {
-    font-size: 21px;
-    text-transform: uppercase;
-    line-height: 26px;
-    font-weight: 700;
-    color: white;
-  }
-}

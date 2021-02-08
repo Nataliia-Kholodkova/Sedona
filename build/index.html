@@ -63,11 +63,12 @@
             </div>
             <div class="section-image">
                 <picture>
-                    <source srcset="img/photo-city-desktop.jpg, img/photo-city-desktop@2x.jpg"
-                            media="(min-width: 1280px)">
-                    <source srcset="img/photo-city-tablet.jpg, img/photo-city-tablet@2x.jpg" media="(min-width: 768px)">
-                    <img src="img/photo-city-mobile.jpg" srcset="img/photo-city-mobile@2x.jpg" width="520" height="260"
-                         alt="photo of the city in Sedona">
+                    <source srcset="img/photo-city-mobile.jpg 1x, img/photo-city-mobile@2x.jpg 2x"
+                            media="(max-width: 768px)">
+                    <source srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x"
+                            media="(max-width: 1279px)">
+                    <img src="img/photo-city-desktop.jpg" srcset="img/photo-city-desktop@2x.jpg 2x"
+                         alt="photo of the city in Sedona" width="520" height="260">
                 </picture>
             </div>
         </section>
@@ -109,12 +110,12 @@
             </div>
             <div class="section-image">
                 <picture>
-                    <source srcset="img/photo-bridge-desktop.jpg, img/photo-bridge-desktop@2x.jpg"
-                            media="(min-width: 1280px)">
-                    <source srcset="img/photo-bridge-tablet.jpg, img/photo-bridge-tablet@2x.jpg"
-                            media="(min-width: 768px)">
-                    <img src="img/photo-bridge-mobile.jpg" srcset="img/photo-bridge-mobile@2x.jpg" width="520"
-                         height="260" alt="photo of the bridge in Sedona">
+                    <source srcset="img/photo-bridge-mobile.jpg 1x, img/photo-bridge-mobile@2x.jpg 2x"
+                            media="(max-width: 768px)">
+                    <source srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x"
+                            media="(max-width: 1279px)">
+                    <img src="img/photo-bridge-desktop.jpg" srcset="img/photo-bridge-desktop@2x.jpg 2x"
+                         alt="photo of the bridge in Sedona"  width="520" height="260">
                 </picture>
             </div>
         </section>
@@ -170,7 +171,7 @@
                 <div class="gmap_canvas">
                     <iframe width="100%" height="350px" id="gmap_canvas"
                             src="https://maps.google.com/maps?q=sedona&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="map"></iframe>
                     </div>
             </div>
         </section>
@@ -181,7 +182,6 @@
                 #visitSEDONA
             </h2>
         </div>
-
         <ul class="social-list">
             <li class="social-item social-item__twitter"><a href="#"><span class="visually-hidden">Twitter</span></a>
             </li>
@@ -190,12 +190,9 @@
             <li class="social-item social-item__youtube"><a href="#"><span class="visually-hidden">Youtube</span></a>
             </li>
         </ul>
-
         <div class="developped">
-
             <a class="link link-academy" href="#">Разработано
                 <svg>
-
                     <use xlink:href="img/sprite-svg.svg#accademy-ico" width="27" height="34"></use>
                 </svg>
             </a>
@@ -250,14 +247,12 @@
                             class="visually-hidden">Upper</span>+
                     </button>
                 </div>
-
             </label>
             <button type="submit" class="btn btn-blue" onclick="closeSearchForm()" name="submit">НАЙТИ</button>
         </form>
     </div>
     <div class="overlay overlay__hidden"></div>
 </div>
-
 <script src="js/script.min.js"></script>
 </body>
 </html>
